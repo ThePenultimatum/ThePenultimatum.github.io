@@ -1,2 +1,3 @@
 name: Mark S. Dyehouse
 markdown: kramdown
+pemalink: /blog/:year/:month/:day/:title
