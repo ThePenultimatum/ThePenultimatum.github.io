@@ -3,7 +3,7 @@ title:              Mark Dyehouse Portfolio
 email:              mdyehous@alumni.cmu.edu
 description:        "Portfolio template for Mark Dyehouse, a student in the MSR program at Northwestern University"
 url:                "http://localhost:4000"
-baseurl:            /msr-student-template
+baseurl:            /ThePenultimatum.github.io
 
 # File structure settings
 image_path:         /public/images
