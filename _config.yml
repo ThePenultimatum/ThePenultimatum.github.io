@@ -1,7 +1,7 @@
 # Site settings
-title:              Portfolio Template
-email:              your-email@domain.com
-description:        "Portfolio template for students in the MSR program at Northwestern University"
+title:              Mark Dyehouse Portfolio
+email:              mdyehous@alumni.cmu.edu
+description:        "Portfolio template for Mark Dyehouse, a student in the MSR program at Northwestern University"
 url:                "http://localhost:4000"
 baseurl:            /msr-student-template
 
