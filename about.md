@@ -2,19 +2,20 @@
 layout: about
 path: /about
 url: index.html
-image: http://unsplash.it/400?random
+image: /public/images/profileImage.png
 ---
 
-## Overview
-Lorem ipsum dolor sit amet, purto tota in vel, exerci discere apeirian has in. Nec noster iracundia eu, utroque facilis ad has. Alii argumentum no his, omnis iusto scripta vim in, ipsum ridens mel at. Has homero phaedrum no, ea autem affert facilis usu, has possim meliore perpetua id. Errem iisque mea ex, option ocurreret no est. Sea facer ullamcorper ne, cu dictas discere repudiandae sea.
+## Mark Dyehouse 101
 
-His nemore audiam consequat ad, no augue choro assueverit mei. Zril offendit tincidunt ne quo. At commodo integre alienum sea, cu vocent fuisset suscipit nam. Eum ex tation omnesque adversarium, mutat autem putant te nam. Id vix facilis complectitur, vis vitae vivendo euripidis ea, fugit eirmod an vix.
+Mark Dyehouse grew up in rural Michigan and graduated from Carnegie Mellon University with a Bachelor of Science in Physics and a minor in Chinese Studies. During his undergraduate studies, he steadily became more influenced by technology and computer science, delving into hackathons and engineering project courses.
 
-Ad case nemore equidem mea. Duo te iuvaret appetere appellantur, sint scaevola usu cu. Eum ne aeque ridens prompta. At legendos vulputate eos, pro illum iuvaret cu, ludus vituperata usu no.
+Working on the design and construction of a prototype for an inflatable habitat for multiple organisms on Mars geared toward food production inspired curiosity in Mark regarding robotic solutions for Martian gardening. He fed his curiosity toward robotics with an experimental project for aiming to read lips and classify language based on lip movements, along with a prototype for a soccer-related object perception pipeline for a Nao robot.
 
-Mel magna discere in. Mea ea dicit homero perfecto. Eam nulla facete scribentur in. Vide volutpat laboramus est cu, usu cu impetus dignissim. Ex pro decore impetus. Ius nihil iisque deterruisset an, ex sanctus verterem his. Doming prompta insolens est ut.
+After graduating, Mark continued work on refining the Martian habitat with three teammates and presented the resultant design as a poster at the 2016 American Society for Gravitational and Space Research conference. From there, Mark became a software engineer with a focus on big data and intelligent analytics embedded into processing pipelines, first working with consumer products and then with healthcare and telemetry data from robots operating in hospitals and pharmacies.
+
+Inspired by his previous work and considering this new telemetry data pipeline, Mark decided to take a deep dive into robotics and chose to attend Northwestern University's MSR program. He dreams of robots safely navigating new environments and integrating much more deeply in society, bringing people together by supporting accessibility for all. He aims to contribute to this effort by advancing his knowledge in swarm robotics, computer vision, soft robotics here at the MSR program.
 
 ### Research interests
-* Interest 1
-* Interest 2
-* Interest 3
+* Swarm Robotics
+* Soft Robotics (and novel actuators for them)
+* Machine learning with regards to robot decision-making

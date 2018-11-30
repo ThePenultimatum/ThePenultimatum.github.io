@@ -2,14 +2,12 @@
 layout: contact
 path: /contact
 url: index.html
-image: http://unsplash.it/400?random
+image: /public/images/profileImage.png
 ---
 
-## Quick Spiel
-Lorem ipsum dolor sit amet, tota primis copiosae id quo. Melius eligendi elaboraret pri et, eam menandri platonem te. Tollit iudicabit gloriatur per ad. Ad diceret recteque eum, eu commodo petentium qui. No aliquid delectus eam, dicta eripuit convenire te nec. Vix no veritus dignissim. Erat ferri veniam ut eos, pro ex eius error intellegat, his te graecis oporteat honestatis.
+## Contact Me
+If you would like to contact me regarding a project, research, or a future collaboration, please do so by email. You can find my contact info below.
 
 * Phone: (616) 308-4557
 * Email: markdyehouse2019@u.northwestern.edu
-* Address: 829 Foster Street, Apt. 407, Evanston, IL 60201
-
-Ad case nemore equidem mea. Duo te iuvaret appetere appellantur, sint scaevola usu cu. Eum ne aeque ridens prompta. At legendos vulputate eos, pro illum iuvaret cu, ludus vituperata usu no.
+* Address: Technological Institute, Northwestern University
