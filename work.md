@@ -1,6 +1,6 @@
 ---
-layout: work
-path: /work
+layout: about
+path: /about
 url: index.html
 ---
 
