@@ -1,12 +1,5 @@
-<header>
-    <nav>
-    	<a href="{{ site.baseurl }}/"><h1>Mark Dyehouse</h1></a>
-    	<ul>
-    		<li><a href="{{ site.baseurl }}/">Portfolio</a></li>
-    		<li><a href="{{ site.baseurl }}/work/">Work Experience</a></li>
-    		<li><a href="{{ site.baseurl }}/about/">About</a></li>
-    		<li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
-    		<li><a href="{{ site.baseurl }}/resume.pdf">Resume</a></li>
-    	</ul>
-    </nav>
+<header class="header">
+  <a class="header__title" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
+
+  {% include navigation.html %}
 </header>
