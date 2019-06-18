@@ -2,7 +2,7 @@
 title: Mark Dyehouse
 subtitle: Roboticist and Software Engineer
 email: mdyehous@alumni.cmu.edu
-description: A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
+description: 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "ThePenultimatum.github.io" # the base hostname & protocol for your site
 author: Mark Dyehouse
@@ -15,7 +15,7 @@ phone: S1x on3 six, three z3r0 e1ght, f0ur five f1ve 53ven
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
-tiles-count: 6
+tiles-count: 7
 
 # social settings
 
