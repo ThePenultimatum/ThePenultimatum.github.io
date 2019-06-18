@@ -13,7 +13,7 @@
   {% endif %}
   {% endfor %}
   {% for page in site.pages limit:20 %}
-  {% if site.tiles-source == 'pages' and page.show_tile != false and page.title != null and page.title != "Elements" and page.title != "Generic" and page.title != "Landing"%}
+  {% if site.tiles-source == 'pages' and page.show_tile != false and page.title != null and page.title != "Elements" and page.title != "Generic" and page.title != "Landing" and page.title != "All posts"%}
   <article>
     <span class="image">
       <img src="{{ page.image }}" alt="" />
