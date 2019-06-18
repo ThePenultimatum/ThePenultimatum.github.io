@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drawing With Sawyer
-description: 
+description: Custom Portraits Drawn with a Sawyer Robotic Arm
 image: assets/images/drawingWithSawyer.png
 nav-menu: true
 ---
