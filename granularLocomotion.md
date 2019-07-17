@@ -2,7 +2,7 @@
 layout: post
 title: Robot for Subsurface Granular Material Locomotion
 description: Robot with Novel Locomotion Method Inside Granular Materials
-image: 
+image: assets/images/sand.jpg
 nav-menu: true
 ---
 
