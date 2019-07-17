@@ -15,5 +15,14 @@ An image of the user’s face is obtained via webcam and the facial component is
 
 [View the project on github here.](https://github.com/ThePenultimatum/finalProject495)
 
-### Teammates
-Chenge Yang, Huan Weng, Guo Ye, Veronica Medrano
+## Team
+
+* **Mark Dyehouse** -[ThePenultimatum](https://github.com/ThePenultimatum)
+* **Chenge Yang** -[ChengeYang](https://github.com/ChengeYang)
+* **Huan Weng** -[HuanWeng](https://github.com/HuanWeng)
+* **Guo Ye** -[michaelyeah7](https://github.com/michaelyeah7)
+* **Veronica Medrano** -[vnoelifant](https://github.com/vnoelifant)
+
+## Acknowledgments
+
+* Dr. Jarvis Schultz
