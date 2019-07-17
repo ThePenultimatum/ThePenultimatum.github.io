@@ -15,5 +15,59 @@ The microcontroller we used is the PIC32. It is on an NU32 board designed and bu
 
 [View the project on github here.](https://github.com/ThePenultimatum/softRoboticsProject)
 
-### Team Members
-Andrew Thompson, Victor Stepanov, Yuchen Wang, Joel Meyer, Ethan Park
+## Components
+
+* 1 NU32 board with PIC32 microcontrollers (1 per node including central node)
+* 
+
+## Implementation
+
+### Design
+
+#### Manifold
+
+##### Air-Vacuum Module
+
+##### Chassis
+
+#### MMVS-McKibben Robot
+
+##### MMVS
+
+##### McKibben
+
+##### Interface Connector
+
+## Resources:
+
+* "Embedded Computing and Mechatronics with the PIC32 Microcontroller" Textbook
+* Soft Robotics Toolkit
+
+## Contributing
+
+If contributing to the modifications in our project here, please follow the following steps:
+* Fork the repository
+* Add your modifications to either the dev branch or a branch off of the dev branch
+* Make a pull request with informative descriptions
+
+## Ongoing Development
+
+Current work:
+* Streamlining electrical components and connections on pneumatic manifold
+* Gait development for MMVS-McKibben combination robot
+
+## Team
+
+* **Mark Dyehouse** -[ThePenultimatum](https://github.com/ThePenultimatum)
+* **Andrew Thompson** -[mossti](https://github.com/mossti)
+* **Victor Stepanov**
+* **Yuchen Wang** -[yuchnw](https://github.com/yuchnw)
+* **Joel Meyer**
+* **Ethan Park**
+
+## License
+
+## Acknowledgments
+
+* Dr. Mitra Hartmann (Northwestern U.)
+* Bill Hunt (Northwestern U.)
