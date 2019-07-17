@@ -18,7 +18,15 @@ The microcontroller we used is the PIC32. It is on an NU32 board designed and bu
 ## Components
 
 * 1 NU32 board with PIC32 microcontrollers (1 per node including central node)
-* 
+* 4+ ft<sup>2</sup> Acrylic sheets for chassis
+* 5 Air pumps
+* 20 Pneumatic solenoid valves
+* 2 Long breadboards (the default common size is okay)
+* 20 feet of solid core wire (ideally in separate colors for organization)
+* Electrical Tape
+* Wire cutters and wire strippers
+* Assorted screws, nuts, bolts, washers
+* Hot Glue, caulk, or epoxy
 
 ## Implementation
 
