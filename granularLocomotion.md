@@ -46,7 +46,7 @@ Cons:
 
 ![Front View of Prototype with Solenoid Actuator](assets/images/solenoidPrototypeUpright.png)
 ![Top View of Prototype with Solenoid Actuator](assets/images/solenoidPrototypeTop.png)
-![Solenoid Actuator(assets/images/solenoid.png)
+![Solenoid Actuator](assets/images/solenoid.png)
 
 #### Gear and Motor Planar System
 
@@ -59,6 +59,8 @@ Cons:
 * More than 1-D motion requires intersecting planar mechanisms
 
 ##### Prototype
+![Side View](assets/images/portraitPlanarGears.png)
+![Bottom View for Visibility](assets/images/bottomViewPlanarGears.png)
 
 #### Cylindrical Rotational-to-Linear System
 
@@ -100,9 +102,27 @@ Cons:
 
 #### Limitations
 
-describe limitations based on equations first
+##### Requirements for Motion:  
 
-then limitations based on materials and speed
+F<sub>impact</sub> &ge; F<sub>&sigma;</sub>  
+
+where F<sub>&sigma;</sub> is the granular material yield stress on the surface area of the robot in the direction in the direction of motion.
+
+F<sub>impact</sub> &ge; &sigma; &#x7c; z<sub>body</sub> - &frac12; h<sub>body</sub> cos(&theta;) &#x7c; &pi; r<sub>body</sub><sup>2</sup>  
+
+Where &theta; is the angle formed between the body's z-axis and the world frame's z-axis, h<sub>body</sub> is the height of the body, z<sub>body</sub> is the z component of the location of the center of the robot system, and r<sub>body</sub> is the radius of the circular face of the robot chassis in the direction of travel.  
+
+F<sub>impact</sub> &Delta; t<sub>impact</sub> = &Delta; p<sub>impactor</sub> &rArr;  F<sub>impact</sub> = <sup>&Delta; p<sub>impactor</sub></sup>&frasl;<sub>&Delta; t<sub>impact</sub></sub>  
+
+<sup>m<sub>impactor</sub> &Delta; v<sub>impactor</sub></sup>&frasl;<sub>&Delta; t<sub>impact</sub></sub> &ge; &sigma; &#x7c; z<sub>body</sub> - &frac12; h<sub>body</sub> cos{&theta;} &#x7c; &pi; r<sub>body</sub><sup>2</sup>  
+
+Given that the magnitude of &Delta; v<sub>impactor</sub> = v<sub>max</sub> and &Delta; t<sub>impact</sub> = [<sup>m<sub>impactor</sub> L<sub>impactor</sub></sup>&frasl;<sub>E A<sub>impactor</sub></sub>]<sup>&frac12;</sup> is known from earlier calculations above, we can substitute this and manipulate the previous inequality to get a bound on depth of travel.  
+
+d &le; <sup>1</sup>&frasl;<sub>&sigma; &pi; r<sub>body</sub><sup>2</sup></sub>  [<sup>E A<sub>impactor</sub> k &Delta; x<sub>compression</sub><sup>2</sup></sup>&frasl;<sub>L<sub>impactor</sub></sub>]<sup>&frac12;</sup> + &frac12; h<sub>body</sub> cos(&theta;)  
+
+Where d represents depth below the surface of the granular material and k represents the spring constant of the spring used.
+
+Limitations regarding speed and materials next.
 
 current board only handles 5 max PWM signals. I can use an IO expander to extend this and use one signal for multiples with a default to low (0% pwm)
 
