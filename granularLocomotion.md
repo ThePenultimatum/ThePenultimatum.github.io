@@ -44,6 +44,10 @@ Cons:
 
 ##### Prototype
 
+![Front View of Prototype with Solenoid Actuator](assets/images/solenoidPrototypeUpright.png)
+![Top View of Prototype with Solenoid Actuator](assets/images/solenoidPrototypeTop.png)
+![Solenoid Actuator(assets/images/solenoid.png)
+
 #### Gear and Motor Planar System
 
 Another option is utilizing a gearing system with a custom tooth set to store potential energy in a spring and use the release to impact a surface with either a custom tooth or an attachment to the gear at the end of the motor-gear system.
