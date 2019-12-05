@@ -20,9 +20,9 @@ The goal of this project is to start from theory and prove out, design, build, a
 * JPL hopping hedge-hog 
 
 #### Subsurface Motion
-* Chen Li legged robotics, yield stress 
-* Stephanie Chang MSR auger robot with Dr. Umbanhowar
-* MIT razor clam
+* Dr. Chen Li et al Studied terradynamics of legged locomotion in and on various granular media, yielding valuable information regarding stresses on objects during penetration and extraction in granular media.
+* Dr. Anette Hosoi and her former student Amos Winter developed a digging robot based on razor clam locomotion that utilizes fluidization of the surrounding granular media during and following specific quick movements.
+* Stephanie Chang, an MS in Robotics alumnus from Northwestern previously worked with Dr. Paul Umbanhowar to develop an auger-based robot for locomotion in granular media.
 
 ### Feasibility
 
@@ -132,15 +132,27 @@ current board only handles 5 max PWM signals. I can use an IO expander to extend
 
 ##### What This Means
 
-#### Motion Experiment
+#### Motion Experiments
 
-##### What This Means
+##### Horizontal Motion, No Additional Mass
+
+###### What This Means
+
+##### Vertical Motion (Up), No Additional Mass
+
+###### What This Means
+
+##### Horizontal Motion, Additional Mass
+
+###### What This Means
+
+##### Vertical Motion (Up), Additional Mass
+
+###### What This Means
 
 ### Next Steps
 
-idea for variable height of lifts using some screwing method with a motor
-
-use accelerometer data during impacts to get info useful for control
+Currently in development is a multidirectional version of this robot which aims to utilize several actuators of the actuators used in the cylindrical robot simultaneously. In addition, a mount for an IMU sensor and the PCB is under development, and an interesting expansion would be exploring control using that sensor data. More robust development of the system using machined parts would also allow for more robust studying of the robot behavior in varying granular material conditions. Beyond this, an on-board battery supply system would allow the robot to be untethered.
 
 ## Acknowledgements
 
