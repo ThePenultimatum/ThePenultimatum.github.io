@@ -8,21 +8,22 @@ nav-menu: true
 
 ## Overview
 
-The goal of this project is to start from theory and prove out, design, build, and test a robot capable of using impulse-based locomotion on and in granular media. This impulse-based locomotion is similar in concept to a piledriver and utilizes research on the yield stress of granular materials. Whereas other recent research into digging and locomotion in granular material has focused more on external methods of moving the media in such a way that it is either fluidized or displaced, this project aims to use no external moving parts and rely purely on the impulsed energy from an internal actuator along with potential utilization of buoyant effects in the media.
+The goal of this project is to start from theory and prove out, design, build, and test a robot capable of using impulse-based locomotion on and in granular media. This impulse-based locomotion is similar in concept to a piledriver and utilizes research on the yield stress of granular materials. Whereas other recent research into digging and locomotion in granular material has focused more on external methods of moving the media in such a way that it is either fluidized or displaced, this project aims to use no external moving parts and rely purely on the impulsed energy from an internal actuator along with buoyant effects in the media.
 
 ### Current and Recent Research
 
-#### Motion on the surface
+#### Surface Motion
 
-* Goldman mass-spring jumping
-* Sidewinder snake robot GA Tech and CMU
-* Sea turtle flippers Umbanhowar and Goldman
-* JPL hopping hedge-hog 
+In a collaboration between researchers at Carnegie Mellon (Dr. Howie Choset) and Georgia Tech (Dr. Daniel Goldman), a sidewinding snake robot was developed to utilize an animal study in which varying surface contact area in sidewinding snakes enables them to ascend granular slopes.
+Dan Goldman and Dr. Paul Umbanhowar collaborated to produce a robot with flippers taking inspired by the biomechanics of young sea turtles crossing sand to reach the ocean after hatching. A flexible wrist is key in acheiving efficient motion here.
+NASA JPL's hopping hedgehog robot utilizes internal flywheels to jump, roll, and tumble on uneven terrain
+Dr. Jeffrey Aguilar and Dan Goldman collaborated to produce a hopping robot in a study into the roles actuation phase and frequency of a mass-spring system play in acheiving optimal jumps.
 
 #### Subsurface Motion
-* Dr. Chen Li et al Studied terradynamics of legged locomotion in and on various granular media, yielding valuable information regarding stresses on objects during penetration and extraction in granular media.
-* Dr. Anette Hosoi and her former student Amos Winter developed a digging robot based on razor clam locomotion that utilizes fluidization of the surrounding granular media during and following specific quick movements.
-* Stephanie Chang, an MS in Robotics alumnus from Northwestern previously worked with Dr. Paul Umbanhowar to develop an auger-based robot for locomotion in granular media.
+Dr. Chen Li et al Studied terradynamics of legged locomotion in and on various granular media, yielding valuable information regarding stresses on objects during penetration and extraction in granular media.
+Dr. Anette Hosoi and her former student Amos Winter developed a digging robot based on razor clam locomotion that utilizes fluidization of the surrounding granular media during and following specific quick movements.
+Stephanie Chang, an MS in Robotics alumnus from Northwestern previously worked with Paul Umbanhowar to develop an auger-based robot for locomotion in granular media.
+Dr. Tilman Spohn and a team of researchers developed and built the HP^3 sensor for the InSight rovor to study temperature fluctuations in the Martian regolith. The device is described as a self-hammering nail and uses an internal impact-based locomotion mechanism with a conical tip on a cylindrical body.
 
 ### Feasibility
 
@@ -37,7 +38,8 @@ Given that the desired effect is one surface repeatedly linearly impacting anoth
 Pros:
 * Linear actuation
 * Frictionless plunger movement unless off axis forces applied to it
-* Force modulated by current
+* Force modulated by current  
+  
 Cons:
 * Limited to pre-existing plunger impact surface
 * Low mass impacter while momentum of the impacter is a key factor in theoretical distance traveled
@@ -54,7 +56,8 @@ Another option is utilizing a gearing system with a custom tooth set to store po
 
 Pros:
 * Rapid prototype iteration
-* Impacter path is a nonlinear curve
+* Impacter path is a nonlinear curve  
+  
 Cons:
 * More than 1-D motion requires intersecting planar mechanisms
 
@@ -68,7 +71,8 @@ A third option is utilizing a motor to transform rotational motion into linear m
 
 Pros:
 * Motor naturally co-axial with impacter
-* High impacter surface area to outside chassis surface area ratio
+* High impacter surface area to outside chassis surface area ratio  
+  
 Cons:
 * Still need intersecting linear mechanisms for more than 1-D motion
 
