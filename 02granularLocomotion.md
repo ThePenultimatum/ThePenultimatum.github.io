@@ -8,6 +8,7 @@ nav-menu: true
 
 ## Overview
 
+Granular media are everywhere in the world around us ranging from the sand on beaches to grains in silos and even to the soil we walk on when strolling through a park. Acheiving motion in and on granular media allows us to study the media itself and to reach desired trajectories within the media (such as the shortest path to a deposit of material or information). Some animals and plants have evolved to locomote through sand and soil, growing roots or displacing material in order to reach water, build caverns, and generally travel. Current popular methods of interacting with granualar media to reach goals include drilling and scoop-based displacement digging. Both of these methods have open-mechanical components interacting with the granular media itself. Locomoting through and in a granular media without leaving mechanisms open to the elements   
 The goal of this project is to start from theory and prove out, design, build, and test a robot capable of using impulse-based locomotion on and in granular media. This impulse-based locomotion is similar in concept to a piledriver and utilizes research on the yield stress of granular materials. Whereas other recent research into digging and locomotion in granular material has focused more on external methods of moving the media in such a way that it is either fluidized or displaced, this project aims to use no external moving parts and rely purely on the impulsed energy from an internal actuator along with buoyant effects in the media.
 
 ### Current and Recent Research
@@ -27,6 +28,9 @@ Dr. Tilman Spohn and a team of researchers developed and built the HP^3 sensor f
 
 ### Feasibility
 
+Conservation of energy and momentum  
+Treat impact materials like springs using Young's Modulus  
+  
 The technical documents with relevant derivations and theory (in progress) are available for viewing on overleaf at this [link](https://www.overleaf.com/read/srybycnmcjgs).
 
 ### Impact Mechanisms
@@ -77,6 +81,7 @@ Cons:
 * Still need intersecting linear mechanisms for more than 1-D motion
 
 ##### Prototype
+![Whole Helical Prototype](assets/images/helicalCylinderWhole.png)
 
 ### Chosen Design
 
@@ -93,7 +98,7 @@ Cons:
 * NU32 PCB
 * 1 or more Breadboards
 * Motor Driver
-* Resistors ( mO)
+* Resistors ( m&Omega;)
 * Capacitors ( mF)
 * Power Supply
 * Bolts ( list size here )
@@ -153,6 +158,10 @@ current board only handles 5 max PWM signals. I can use an IO expander to extend
 ##### Vertical Motion (Up), Additional Mass
 
 ###### What This Means
+
+### Discussion
+
+Discuss.
 
 ### Next Steps
 
