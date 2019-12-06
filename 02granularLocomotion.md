@@ -30,8 +30,15 @@ Dr. Tilman Spohn and a team of researchers developed and built the HP<sup>3</sup
 
 Conservation of energy and momentum  
 Treat impact materials like springs using Young's Modulus  
+
+There are two important parts of the impact and resultant motion to consider.One is the part during which the impactor is still moving toward the chassis andapproximate elastic deformation is occurring.  The chassis reaches a maximum velocity due to the impact and then the second stage takes over.  During thesecond stage, the motion of the entire chassis is governed by the initial maximumvelocity and the pressure applied by the granular material.
+From the work done by Chen Li et al in which yield stresses of granular materials were characterized, they found that the yield stress &sigma; linearly increases with depth. Treating the materials in impact as a spring and mass, we can find an acceleration and in turn an impact time.  
+&Delta; t<sub>impact</sub> = &radic;(<sup>m<sub>impactor</sub> L<sub>impactor</sub></sup> &frasl; <sub>EA<sub>impactor</sub></sub>)  
+Using this time along with the accelerations on the chassis of the system, we can calculate the expected change in position.  
+
+Put data here to show that calculated distances are reasonable and movement is possible using common materials
   
-The technical documents with relevant derivations and theory (in progress) are available for viewing on overleaf at this [link](https://www.overleaf.com/read/srybycnmcjgs).
+The technical documents with relevant derivations and theory (in progress) are available for viewing on Overleaf at this [link](https://www.overleaf.com/read/srybycnmcjgs).
 
 ### Impact Mechanisms
 
