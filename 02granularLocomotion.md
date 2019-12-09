@@ -31,8 +31,7 @@ Dr. Tilman Spohn and a team of researchers developed and built the HP<sup>3</sup
 There are two important parts of the impact and resultant motion to consider.One is the part during which the impactor is still moving toward the chassis andapproximate elastic deformation is occurring.  The chassis reaches a maximum velocity due to the impact and then the second stage takes over.  During thesecond stage, the motion of the entire chassis is governed by the initial maximumvelocity and the pressure applied by the granular material.
 From the work done by Chen Li et al in which yield stresses of granular materials were characterized, they found that the yield stress &sigma; linearly increases with depth. Treating the materials in impact as a spring and mass, we can find an acceleration and in turn an impact time.  
 &Delta; t<sub>impact</sub> = &radic;(<sup>m<sub>impactor</sub> L<sub>impactor</sub></sup> &frasl; <sub>EA<sub>impactor</sub></sub>)  
-Using this time along with the accelerations on the inside and outside of the chassis of the system, we can calculate the expected change in position.  
-Performing some test calculations with common and likely materials showed expected changes in position within an order of magnitude of the grain size of common granular materials such as medium-grain sand and poppy seeds. Based on these sample calculations, building out prototypes to test the understanding of the impacts and accelerations the chassis will undergo is beneficial to a design of the whole robot.
+Using this time along with the accelerations on the inside and outside of the chassis of the system, we can calculate the expected change in position. Performing some test calculations with common and likely materials showed expected changes in position within an order of magnitude of the grain size of common granular materials such as medium-grain sand and poppy seeds. Based on these sample calculations, building out prototypes to test the understanding of the impacts and accelerations the chassis will undergo is beneficial to a design of the whole robot.
   
 The technical documents with relevant derivations and theory are available for viewing on Overleaf at this [link](https://www.overleaf.com/read/srybycnmcjgs).
 
@@ -63,7 +62,7 @@ Another option is utilizing a gearing system with a custom tooth set to store po
 
 Pros:
 * Rapid prototype iteration
-* Impacter path is a nonlinear curve  
+* Impacter path is not a straight curve, which results in more lateral forces  
   
 Cons:
 * More than 1-D motion requires intersecting planar mechanisms
@@ -88,7 +87,7 @@ Cons:
 
 ### Chosen Design
 
-Given the benefits of having a motor co-axial with the impacter and those of having a low volume to output force ratio with the rotational-to-linear cylindrical impacter system, this became the chosen testbed for further exploration.
+Given the benefits of having a motor co-axial with the impacter and those of having a low volume to output force ratio with the rotational-to-linear cylindrical impacter system, this became the chosen testbed for further exploration. In this prototype, for the purpose of allowing the greatest variance in angles and spring compression, I have chosen to limit the number of helix rises to three. Fewer rises can acheive the same spring compression with lower angles. So lower friction forces resist the motor as it compresses the spring.
 
 #### Components
 
@@ -105,11 +104,12 @@ Given the benefits of having a motor co-axial with the impacter and those of hav
 * NU32 PCB
 * 1 or more Breadboards
 * Motor Driver
-* Resistors ( m&Omega;)
-* Capacitors ( &mu;F)
-* Power Supply
-* Bolts ( list size here )
-* Nuts ( list size here )
+* Resistors ( 10k&Omega;)
+* Capacitors ( 10&mu;F)
+* Power Supply (6-12V, I&ge;1.2mA)
+* Bolts
+* Nuts
+* Washers
 
 #### Electronics
 
@@ -117,6 +117,8 @@ Given the benefits of having a motor co-axial with the impacter and those of hav
 ![NU32 IC, Motor Driver, and One Motor](assets/images/circuitDiagramGranularNoSensor.png)
 
 #### Limitations
+
+![Diagonal Up Demonstration](assets/images/diagUpPoppy.gif)
 
 ##### Requirements for Motion:  
 
@@ -126,19 +128,14 @@ Using the momenta in the system, we can manipulate the equations of motion in or
 
 d &le; <sup>1</sup>&frasl;<sub>&sigma; &pi; r<sub>body</sub><sup>2</sup></sub>  [<sup>E A<sub>impactor</sub> k &Delta; x<sub>compression</sub><sup>2</sup></sup>&frasl;<sub>L<sub>impactor</sub></sub>]<sup>&frac12;</sup> + &frac12; h<sub>body</sub> cos(&theta;)  
 
-Where d represents depth below the surface of the granular material, E is the Young's modulus of the impacter, theta is the angle the body of the robot makes with the z-axis of the world frame, and k represents the spring constant of the spring used.
+Where d represents depth below the surface of the granular material, E is the Young's modulus of the impacter, theta is the angle the body of the robot makes with the z-axis of the world frame, and k represents the spring constant of the spring used.  
 
-Discuss the limitations given angles and rises on the helix:
-THIS IS THE IMPORTANT PART FROM MY WHITEBOARD CALCULATIONS
-The kinetic energy the impactor has depends on how much of the potential energy stored in the spring can be imparted onto the impactor. Since the spring imparts a force during decompression on both the impactor and the chassis in opposite directions, that means that the maximum energy is transferred to the impactor when the chassis is immobilized by forces that will keep it stationary during that decompression. The important part is to make sure that the impactor has enough momentum to allow the yield stress of the granular material in the direction of actuation to be exceeded. 
+The kinetic energy the impactor has depends on how much of the potential energy stored in the spring can be imparted onto the impactor. Since the spring imparts a force during decompression on both the impactor and the chassis in opposite directions, that means that the maximum energy is transferred to the impactor when the chassis is immobilized by forces that will keep it stationary during that decompression. The important part is to make sure that the impactor has enough momentum to allow the yield stress of the granular material in the direction of actuation to be exceeded.  
+
+An additional limitation is that of the motor itself. The motor torque is limited by its construction, and the force exerted by the motor divided between the rises on the helical component must be greater than the combination of the friction and spring forces along the slope of the rise. So naturally higher slopes result in higher friction and spring force components which the motor must overcome to acheive spring compression.
+
 
 ### Experiments and Characterization
-
-![Diagonal Up Demonstration](assets/images/diagUpPoppy.gif)
-
-#### Impact Force Experiment
-
-##### What This Means
 
 #### Motion Experiments
 
@@ -146,25 +143,17 @@ The kinetic energy the impactor has depends on how much of the potential energy 
 
 ![Horizontal, No Additional Mass Demonstration](assets/images/horizNoMass.gif)
 
-###### What This Means
-
 ##### Vertical Motion (Up), No Additional Mass
 
 ![Vertical, No Additional Mass Demonstration](assets/images/vertNoMass.gif)
-
-###### What This Means
 
 ##### Horizontal Motion, Additional Mass
 
 ![Horizontal, Additional Mass Demonstration](assets/images/horizMass.gif)
 
-###### What This Means
-
 ##### Vertical Motion (Up), Additional Mass
 
 ![Vertical, Additional Mass Demonstration](assets/images/vertMass.gif)
-
-###### What This Means
 
 ### Discussion
 
