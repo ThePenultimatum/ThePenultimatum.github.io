@@ -33,7 +33,7 @@ The goal of this project is to design, build, and test a robot capable of using 
 
 ### Feasibility
 
-There are two important parts of the impact and resultant motion to consider.One is the part during which the impactor is still moving toward the chassis andapproximate elastic deformation is occurring.  The chassis reaches a maximum velocity due to the impact and then the second stage takes over.  During thesecond stage, the motion of the entire chassis is governed by the initial maximumvelocity and the pressure applied by the granular material.
+There are two important parts of the impact and resultant motion to consider, and let us assume that all energy is transferred in one impact (such that there are not successive energetically decreasing elastic impacts in each larger impact). One part is the part during which the impactor is still moving toward the chassis and approximate elastic deformation is occurring. The chassis reaches a maximum velocity due to the impact and then the second stage takes over. During the second stage, the motion of the entire chassis is governed by the initial maximum velocity and the pressure applied by the granular material.
 From the work done by Chen Li et al in which yield stresses of granular materials were characterized, they found that the yield stress &sigma; linearly increases with depth. Treating the materials in impact as a spring and mass, we can find an acceleration and in turn an impact time.  
 Using this time along with the accelerations on the inside and outside of the chassis of the system, we can calculate the expected change in position. Performing some test calculations with common and likely materials showed expected changes in position within an order of magnitude of the grain size of common granular materials such as medium-grain sand and poppy seeds. Based on these sample calculations, building out prototypes to test the understanding of the impacts and accelerations the chassis will undergo is beneficial to a design of the whole robot.
 
@@ -54,9 +54,7 @@ Pros:
   
 Cons:
 * Limited to pre-existing plunger impact surface without special modifications
-* Low mass impacter while momentum of the impacter is a key factor in theoretical distance traveled
-
-##### Prototype
+* Low mass impactor while momentum of the impactor is a key factor in theoretical distance traveled
 
 ![Front View of Prototype with Solenoid Actuator](assets/images/solenoidPrototypeUpright.png)
 ![Top View of Prototype with Solenoid Actuator](assets/images/solenoidPrototypeTop.png)
@@ -68,12 +66,11 @@ Another option is utilizing a gearing system with a custom tooth set to store po
 
 Pros:
 * Rapid prototype iteration
-* Impacter path is not a straight curve, which results in more lateral forces  
+* Impactor path is not a straight curve, which results in more lateral forces  
   
 Cons:
 * More than 1-D motion requires intersecting planar mechanisms
 
-##### Prototype
 ![Side View](assets/images/portraitPlanarGears.png)
 ![Bottom View for Visibility](assets/images/bottomViewPlanarGears.png)
 
@@ -82,20 +79,19 @@ Cons:
 Building on the previous prototypes and ideas, the third prototype uses a motor to transform rotational motion into linear motion to store energy in a spring. Then, the release can be utilized to impact a surface with a component along the spring's axis of compression.
 
 Pros:
-* Motor naturally co-axial with impacter
-* High impacter surface area to outside chassis surface area ratio  
+* Motor naturally co-axial with impactor
+* High impactor surface area to outside chassis surface area ratio  
   
 Cons:
 * Still need intersecting linear mechanisms for more than 1-D motion
 
-##### Prototype
 ![Whole Helical Prototype](assets/images/helicalCylinderWhole.png)
 
 ### Chosen Design
 
 ![Diagonal Up Demonstration](assets/images/diagUpPoppy.gif)
 
-Given the benefits of having a motor co-axial with the impacter and those of having a low volume to output force ratio with the rotational-to-linear cylindrical impacter system, this became the chosen testbed for further exploration. In this prototype, for the purpose of allowing the greatest variance in angles and spring compression, I have chosen to limit the number of helix rises to three. Fewer rises can acheive the same spring compression with lower angles. So lower friction forces resist the motor as it compresses the spring.
+Given the benefits of having a motor co-axial with the impactor and those of having a low volume to output force ratio with the rotational-to-linear cylindrical impactor system, this became the chosen testbed for further exploration. In this prototype, for the purpose of allowing the greatest variance in angles and spring compression, I have chosen to limit the number of helix rises to three. Fewer rises can acheive the same spring compression with lower angles. So lower friction forces resist the motor as it compresses the spring.
 
 #### Components
 
@@ -124,29 +120,9 @@ Given the benefits of having a motor co-axial with the impacter and those of hav
 ##### Circuit Diagram
 ![NU32 IC, Motor Driver, and One Motor](assets/images/circuitDiagramGranularNoSensor.png)
 
-#### Limitations
-
-##### Requirements for Motion:  
-
-In order to move, the stress created by the impact force must be greater than the yield stress (&sigma;) on the surface of the robot in the direction of travel.  
-
-Using the momenta in the system, we can manipulate the equations of motion in order to get an upper bound on depth as a function of the robot geometry, position, and materials.
-
-![Depth Bounds](assets/images/depthLimitationGranular.png)
-
-Where d represents depth below the surface of the granular material, E is the Young's modulus of the impacter, theta is the angle the body of the robot makes with the z-axis of the world frame, and k represents the spring constant of the spring used.  
-
-The kinetic energy the impactor has depends on how much of the potential energy stored in the spring can be imparted onto the impactor. Since the spring imparts a force during decompression on both the impactor and the chassis in opposite directions, that means that the maximum energy is transferred to the impactor when the chassis is immobilized by forces that will keep it stationary during that decompression. The important part is to make sure that the impactor has enough momentum to allow the yield stress of the granular material in the direction of actuation to be exceeded.  
-
-An additional limitation is that of the motor itself. The motor torque is limited by its construction, and the force exerted by the motor divided between the rises on the helical component must be greater than the combination of the friction and spring forces along the slope of the rise. So naturally higher slopes result in higher friction and spring force components which the motor must overcome to acheive spring compression.  
-
-##### Material Limitations:
-
-As can be seen in the above limitations on depth at which this robot can operate, the materials from which the impacter and chassis are made come into play as the Young's modulus. A higher value in this instance increases the range which the robot can travel in depth.  
-
-Beyond that, as we can see from Chen Li's work with terradynamics in granular materials, the yield stresses' linear variance with depth means that objects embedded and/or moving within the material are subject to pressure differentials. This results in buoyant forces acting on the objects. So, using materials that overall result in a system less dense than poppy seeds, one should expect this buoyant force to assist in vertical motion. In other words, if the robot is not actuating, and the poppy seeds are fluidized, the robot will eventually float to the surface.  
-
 ### Experiments and Characterization
+
+For the following experiments, a container filled with poppy seeds is used for horizontal and vertical locomotion experiments with and without additional mass added to the impactor. The results are visible below, and the film is sped up to be visible in quick succession.
 
 #### Motion Experiments
 
@@ -168,18 +144,40 @@ Beyond that, as we can see from Chen Li's work with terradynamics in granular ma
 
 ### Discussion
 
-Discuss.  
+#### Limitations
+
+##### Requirements for Motion:  
+
+In order to move, the stress created by the impact force must be greater than the yield stress (&sigma;) on the surface of the robot in the direction of travel. For this simple calculation, let's assume that the other forces acting on the chassis are in equilibrium (such that the robot is of equal density to the granular material). Using the momenta in the system, we can manipulate the equations of motion in order to get an upper bound on depth as a function of the robot geometry, position, and materials.
+
+![Depth Bounds](assets/images/depthLimitationGranular.png)
+
+Here, d represents depth below the surface of the granular material, E is the Young's modulus of the impactor, theta is the angle the body of the robot makes with the z-axis of the world frame, and k represents the spring constant of the spring used.  
+
+The kinetic energy the impactor has depends on how much of the potential energy stored in the spring can be imparted onto the impactor. Since the spring imparts a force during decompression on both the impactor and the chassis in opposite directions, that means that the maximum energy is transferred to the impactor when the chassis is immobilized by forces that will keep it stationary during that decompression. The important part is to make sure that the impactor has enough momentum to allow the yield stress of the granular material in the direction of actuation to be exceeded.  
+
+An additional limitation is that of the motor itself. The motor torque is limited by its construction, and the force exerted by the motor divided between the rises on the helical component must be greater than the combination of the friction and spring forces along the slope of the rise. So naturally higher slopes result in higher friction and spring force components which the motor must overcome to acheive spring compression.  
+
+##### Material Limitations:
+
+As can be seen in the above limitations on depth at which this robot can operate, the materials from which the impactor and chassis are made come into play as the Young's modulus. A higher value in this instance increases the range which the robot can travel in depth. An assumption made here is that the depth limitation is reached before the fracture limit of the chassis itself. 
+
+In addition, as we can see from Chen Li's work with terradynamics in granular materials, the yield stresses' linear variance with depth means that objects embedded and/or moving within the material are subject to pressure differentials. This results in buoyant forces acting on the objects. So, using materials that overall result in a system less dense than the granular material, one should expect this buoyant force to assist in vertical motion. In other words, if the robot is not actuating, and the granular material is fluidized, the robot will eventually float to the surface.  
+
+#### Behavior
+
+When placed upright on the surface of the poppy seeds, the system agitates the material and rotates slightly, but the results are limited to this. The rotational forces being applied to the chassis include both those exerted by the wire for the motor as it prefers its coiled state along with those exerted by by the rotational elements inside the chassis. The lack of downward motion means that the combined forces from gravity along with the impact do not exceed the yield stress at the surface. In addition, there is an upward force on the chassis during the release as the spring applies force to both the chassis and impactor. This was confirmed using a force sensor. The upward force results in a small upward motion. Under the circumstance in which the spring force is not greater than the combination of forces applied on the chassis in the opposite direction as that of the spring on the chassis, the chassis will not see this reverse motion before the impact occurs. This is confirmed experimentally in submerged trials.  
+
+Discuss the multiple impacts and reverse forces that decrease during impact
 
 FORCES THAT ARE APPLIED, REFERENCE FORCE SENSOR DATA, RELEASE upward force, IMPACT downward force  
   
 Efficiency compared to known systems/animals  
   
-Discuss downward digging behavior results  
-  
 Discuss friction  
   
 Discuss impact times  
-Two parts of the impact: impacter vmax => v=0, chassis in motion => chassis stopped  
+Two parts of the impact: impactor vmax => v=0, chassis in motion => chassis stopped  
 These two parts of the impact directly follow one another. Experimentally, we found that 
   
 Discuss the difference in continuous actuation vs discrete actuation  
@@ -192,7 +190,7 @@ This process allows the windup of the spring (which involves an acceleration of 
 INCLUDE MATH TO SHOW HOW MUCH THIS MATTERS
   
 Discuss long spring slow acceleration idea:  
-Along the same lines of thought as the slow cocking method, using a longer and weaker spring to achieve the same overall impacter momentum would allow the acceleration of the impactor to occur over a longer period of time, applying lower forces to the chassis. This would allow movement when stabilization forces on the chassis (such as static friction and external pressure) are relatively low. This circumstance occurs especially when the chassis is partially or entirely above the surface of the granular material.  
+Along the same lines of thought as the slow cocking method, using a longer and weaker spring to achieve the same overall impactor momentum would allow the acceleration of the impactor to occur over a longer period of time, applying lower forces to the chassis. This would allow movement when stabilization forces on the chassis (such as static friction and external pressure) are relatively low. This circumstance occurs especially when the chassis is partially or entirely above the surface of the granular material.  
 
 
 ### Next Steps
