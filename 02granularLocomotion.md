@@ -23,6 +23,7 @@ NASA JPL's hopping hedgehog robot utilizes internal flywheels to jump, roll, and
 
 #### Subsurface Motion
 Dr. Chen Li et al Studied terradynamics of legged locomotion in and on various granular media, yielding valuable information regarding stresses on objects during penetration and extraction in granular media.  
+Goldman's lab in collaboration with Umbanhowar also developed an undulating robot inspired by the oscillitory motion of a sandfish lizard. Studying the types of movement, the group found patterns which optimize speed and energy use.
 Dr. Anette Hosoi and her former student Amos Winter developed a digging robot based on razor clam locomotion that utilizes fluidization of the surrounding granular media during and following specific quick movements.  
 Stephanie Chang, an MS in Robotics alumnus from Northwestern previously worked with Paul Umbanhowar to develop an auger-based robot for locomotion in granular media.  
 Dr. Tilman Spohn and a team of researchers developed and built the HP<sup>3</sup> sensor for the InSight rovor to study temperature fluctuations in the Martian regolith. The device is described as a self-hammering nail and uses an internal impact-based locomotion mechanism with a conical tip on a cylindrical body.  
@@ -144,6 +145,28 @@ For the following experiments, a container filled with poppy seeds is used for h
 
 ### Discussion
 
+#### Performance
+
+Make a chart here: ?  
+  
+Minimum force to move up in less than 5cm for given geometry: 3.7 N  
+Minimum energy used per up buried less than 5cm cm traveled: 0.037 <sup>J</sup>&frasl;<sub>cm</sub>  
+Minimum force to move horizontal for given geometry (unburied): 0.25 N  
+Minimum energy used per horizontal unburied at surface cm traveled: 0.0025 <sup>J</sup>&frasl;<sub>cm</sub>  
+Minimum force to move horizontal for given geometry (buried): 1.47 N  
+Minimum energy used per horizontal buried at surface cm traveled: 0.0147 <sup>J</sup>&frasl;<sub>cm</sub>  
+Average motor current: 65 mA  
+Average motor voltage: 9.48 V  
+Energy used per horizontal buried at surface cm traveled: 24 <sup>J</sup>&frasl;<sub>cm</sub>  
+Up (mass): 2 cm / min  
+Energy used per cm vertical up buried less than 5cm for given geometry: 18.3 <sup>J</sup>&frasl;<sub>cm</sub>  
+
+The energy expenditures per cm traveled are around 500 times the minimum energy required to move the object.
+
+In order to compare efficiency, we can consider the amount of energy expended by a system in order to travel a certain distance. 
+  
+Efficiency compared to known systems/animals  
+
 #### Limitations
 
 ##### Requirements for Motion:  
@@ -179,13 +202,6 @@ The buoyant forces appear again in the horizontal motion experiments; when the r
 It is important to consider that the actuation in this system is discrete. This is different from considering a continuous actuation system such as if you attach a motor to a wheel and rotation is directly related to motion. Continuous actuation in this system would create constant fluidization of the granular media directly surrounding the robot. This would leave the chassis susceptible to the buoyant forces constantly which would move the robot either up or down at a constant rate unless the system matches the density of the granular media. That could be a benefit depending on the particular use case or circumstance in which the robot is operating. Discrete actuation allows the granular media which has received kinetic energy from the robot system to reach a stationary equilibrium. This simplifies the system. If there were a constant buoyant force being applied and the system is too dense or not dense enough to maintain its position, then it would need to constantly counteract the buoyant force with actuation. Data from the force sensor showed that instead of the assumption made during the initial calculations that the impact is a single event, the impact event is actually successive energetically decreasing impact events. This behavior should be explored more in depth as it could result in longer fluidization times of the material surrounding the chassis. This could also be explored by choosing different materials.  
 
 Another important point to discuss about the experiments is the mass variation of the impactor. I chose to make this change in order to examine the behavior expected given the reliance on momentum in the equations governing the resultant motion. An added benefit is that this increases the density of the robot and should allow for better digging compared to the original model. Although the added mass was not enough to make notable improvements in digging, it did result in improved horizontal and upward locomotion in and on the poppy seeds. This is potentially due to a combination of the impact itself and the increased friction with the material acting as a stabilizing force. However, more exploration of the behavior under different masses of impactor and robot density is necessary in order to fully understand the behavior of the system.
-  
-#### Performance
-
-Show power consumption and compare work  
-  
-Efficiency compared to known systems/animals  
-
 
 ### Next Steps
 
