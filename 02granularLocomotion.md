@@ -124,7 +124,7 @@ Given the benefits of having a motor co-axial with the impactor and those of hav
 
 DISCUSS THE MECHANICAL COMPONENTS, CONSTRUCTION, AND VARIED PARAMETERS HERE, ADD STL FILES / SCREENSHOTS
 
-![Slider](assets/images/slider.stl)  
+<p align="center"><script src="assets/images/slider.stl"></script></p>  
 ![Helix](assets/images/helix.stl)
 
 #### Electronic Components
