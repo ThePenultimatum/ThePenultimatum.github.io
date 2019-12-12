@@ -124,8 +124,8 @@ Given the benefits of having a motor co-axial with the impactor and those of hav
 
 DISCUSS THE MECHANICAL COMPONENTS, CONSTRUCTION, AND VARIED PARAMETERS HERE, ADD STL FILES / SCREENSHOTS
 
-<p align="center"><script src="assets/images/slider.stl"></script></p>  
-![Helix](assets/images/helix.stl)
+<p align="center"><script src="https://github.com/ThePenultimatum/ThePenultimatum.github.io/blob/master/assets/images/slider.stl"></script></p>  
+<p align="center"><script src="https://github.com/ThePenultimatum/ThePenultimatum.github.io/blob/master/assets/images/helix.stl"></script></p> 
 
 #### Electronic Components
 
