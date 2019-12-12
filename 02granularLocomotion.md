@@ -41,7 +41,7 @@ In this article, I will detail the development and testing of a robot capable of
 <!-- Add a simple image to demostrate the masses colliding with a spring stopping force
     -->
 
-At its simplest, the basic idea is that one can initially have two masses, and one is accelerated into the other, colliding inelastically and transferring all of its kinetic energy to the other mass.  
+At its simplest, the basic idea is that one can initially have two masses, and one is accelerated into the other, colliding inelastically and conserving momenta between the two masses in the collision.  
 There are two important parts of the impact and resultant motion to consider, and let us assume for simplicity that all energy is transferred in one inelastic collision between the impactor and chassis. First is the impact phase during which the impactor is moving toward the chassis and then approximate elastic deformation occurs as the impactor contacts the chassis. This is due to the stopping force the chassis applies to the impactor to stop its motion. The chassis reaches a maximum velocity due to the impact and resultant stopping force, and then the coasting stage takes over. During the coasting stage, the motion of the entire chassis is governed by the initial maximum velocity of the chassis and the pressure applied by the granular material.
 
 #### Feasibility
