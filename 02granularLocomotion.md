@@ -54,6 +54,9 @@ Relevent definitions, equations, derivations, and expressions for the variables 
 
 ### Impact Mechanism Explorations
 
+The reason to explore mechanisms for impact is to aim for an optimization of potential impact forces, small size, and energy efficiency. In addition, since these prototype mechanisms are only for one-dimensional motion, I also want to consider how these mechanisms would extend for use in three-dimensional motion.
+The ideal system would easily or naturally extend to three-dimensional motion, be small in size, symmetric about one or more axes, have a small profile in the direction of motion (translating to low drag), have a low recoil force during actuation (due to acceleration of the impactor), have reasonable power constraints, and have high impact force.
+
 #### Solenoid-based
 
 Given that the desired effect is one surface repeatedly linearly impacting another surface which is the chassis of the robot in the direction of travel, one clear actuation method to explore is a solenoid-based impact mechanism. Current in a coil then accelerates a plunger along the axis of its magnetic field inside the coil until the plunger impacts or reaches its stroke length. This can be repeatedly actuated in such a way. The resultant motion is a function of current since that is the driving factor in the magnetic field that accelerates the plunger before it impacts the surface. The limitations here are the current and voltage limits in the circuit which depend on the specific solenoid actuator and other components in the circuit.
