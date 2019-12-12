@@ -74,7 +74,7 @@ Cons:
 ![Top View of Prototype with Solenoid Actuator](assets/images/solenoidPrototypeTop.png)
 ![Solenoid Actuator](assets/images/solenoid.png)
 
-#### Gear and Motor Planar System
+#### Gear-Based Planar Trigger Mechanism with Energy Storage
 
 Another method to explore is a gearing system with a custom tooth set to store potential energy in a spring and use the release to impact a surface with either a custom tooth or an attachment to the gear at the end of the motor-gear system. The system here is limited by its shape since gearing up from the motor to a gear-based impactor has impact forces increasing with the radii of the gear at the end of the connected system. Despite its limitations, it shows that the forces desired in the system can be achieved using the combination of a small motor and physical gear-based impactors.
 
@@ -83,12 +83,12 @@ Pros:
 * Impactor path is not a straight curve, which results in more lateral forces  
   
 Cons:
-* More than 1-D motion requires intersecting planar mechanisms
+* More than one-dimensional motion requires intersecting planar mechanisms
 
 ![Side View](assets/images/portraitPlanarGears.png)
 ![Bottom View for Visibility](assets/images/bottomViewPlanarGears.png)
 
-#### Cylindrical Rotational-to-Linear System
+#### Cylindrical Rotational-to-Linear Motion Mechanism with Energy Storage
 
 Building on the previous prototypes and ideas, the third prototype uses a motor to transform rotational motion into linear motion to store energy in a spring. Then, the release can be utilized to impact a surface with a component along the spring's axis of compression.
 
@@ -97,7 +97,7 @@ Pros:
 * High impactor surface area to outside chassis surface area ratio  
   
 Cons:
-* Still need intersecting linear mechanisms for more than 1-D motion
+* Still need intersecting linear mechanisms for more than one-dimensional motion
 
 ![Whole Helical Prototype](assets/images/helicalCylinderWhole.png)
 
@@ -124,8 +124,8 @@ Given the benefits of having a motor co-axial with the impactor and those of hav
 
 DISCUSS THE MECHANICAL COMPONENTS, CONSTRUCTION, AND VARIED PARAMETERS HERE, ADD STL FILES / SCREENSHOTS
 
-<p align="center"><script src="https://github.com/ThePenultimatum/ThePenultimatum.github.io/blob/master/assets/images/slider.stl"></script></p>  
-<p align="center"><script src="https://github.com/ThePenultimatum/ThePenultimatum.github.io/blob/master/assets/images/helix.stl"></script></p> 
+<p align="center"><script src="https://embed.github.com/view/3d/ThePenultimatum/ThePenultimatum.github.io/blob/master/assets/images/slider.stl"></script></p>  
+<p align="center"><script src="https://embed.github.com/view/3d/ThePenultimatum/ThePenultimatum.github.io/blob/master/assets/images/helix.stl"></script></p> 
 
 #### Electronic Components
 
@@ -198,7 +198,7 @@ In addition, as we can see from the work of Li et al. with terradynamics in gran
 
 When placed upright with the actuation direction pointing down into the poppy seed bed, the system agitates the material and rotates slightly, but the results are limited to this behavior. The rotational forces being applied to the chassis include both those exerted by the wire for the motor as it prefers its coiled state along with those exerted by by the rotational elements inside the chassis. The lack of downward motion means that the combined forces from gravity along with the impact do not exceed the yield stress at the surface. In addition, there is an upward force on the chassis during the release as the spring applies force to both the chassis and impactor. This was confirmed using a force sensor. The upward force results in a small upward motion. Under the circumstance in which the spring force is not greater than the combination of forces applied on the chassis in the opposite direction as that of the spring on the chassis, the chassis will not see this reverse motion before the impact occurs. This is confirmed experimentally in submerged trials.  
 
-One potential solution to the spring kickback force is increased friction or pressure on the reverse end of the robot chassis. This is most likely to occur while the robot is submerged. In order to achieve this without submersion (in order to allow digging from above-ground), one potential solution is utilization of a longer but weaker spring. The trade-off is in size, shape, and complexity of a larger system that operates in more than 1-D motion. Using a longer and weaker spring to achieve the same overall impactor momentum would allow the acceleration of the impactor to occur over a longer period of time, applying lower forces to the chassis. This would allow movement when stabilization forces on the chassis (such as static friction and external pressure) are relatively low. This circumstance occurs especially when the chassis is partially or entirely above the surface of the granular material.  
+One potential solution to the spring kickback force is increased friction or pressure on the reverse end of the robot chassis. This is most likely to occur while the robot is submerged. In order to achieve this without submersion (in order to allow digging from above-ground), one potential solution is utilization of a longer but weaker spring. The trade-off is in size, shape, and complexity of a larger system that operates in more than one-dimensional motion. Using a longer and weaker spring to achieve the same overall impactor momentum would allow the acceleration of the impactor to occur over a longer period of time, applying lower forces to the chassis. This would allow movement when stabilization forces on the chassis (such as static friction and external pressure) are relatively low. This circumstance occurs especially when the chassis is partially or entirely above the surface of the granular material.  
 
 Along the same line of thought as the long spring acceleration method, something interesting to explore is a method of slowing the spring-loading down to its minimum speed in order to reduce the magnitude of forces applied to the chassis during this process. This process allows the windup of the spring (which involves an acceleration of internal components of the system, thereby applying forces to the chassis as well) to be applied over a longer period of time. This means that the accelerations and therefore the forces applied to the chassis are smaller.  
   
@@ -217,7 +217,7 @@ Another important point to discuss about the experiments is the mass variation o
 ### Next Steps
 
 * Sensorization
-* 3-D actuation design (as opposed to current 1-D)
+* Three-dimensional actuation design (as opposed to current one-dimensional)
 * Construction from metal
 * Control based on sensor data and/or pre-calculated trajectories
 * Variable speed
