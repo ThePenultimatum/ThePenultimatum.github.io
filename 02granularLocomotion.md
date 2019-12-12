@@ -102,32 +102,41 @@ Cons:
 
 Given the benefits of having a motor co-axial with the impactor and those of having a low volume to output force ratio with the rotational-to-linear cylindrical impactor system, this became the chosen testbed for further exploration. In this prototype, for the purpose of allowing the greatest variance in angles and spring compression, I have chosen to limit the number of helix rises to three. Fewer rises can achieve the same spring compression with lower angles. So lower friction forces resist the motor as it compresses the spring.
 
-#### Components
+#### Mechanical Components
 
-![Deconstructed Prototype](assets/images/deconstructedGranularRobot.png)
+![Deconstructed Prototype](assets/images/deconstructedGranularRobotLabeled.png)
 
-* Motor Casing
-* Chassis With Slots
-* Slider Mechanism
-* Motor Spacer
-* Helix Rotator
-* Spring Spacer
-* Spring
-* Motor
+* Motor Casing (A)
+* Motor Spacer (B)
+* Spring (C)
+* Spring Spacer (D)
+* Slider / Impactor (E)
+* Helix Rotator (F)
+* Chassis with Slots (G)
+* Bolts
+* Nuts
+* Washers (Not pictured, optional for mass modulation)
+
+DISCUSS THE MECHANICAL COMPONENTS, CONSTRUCTION, AND VARIED PARAMETERS HERE, ADD STL FILES / SCREENSHOTS
+
+![Slider](assets/images/slider.stl)  
+![Helix](assets/images/helix.stl)
+
+#### Electronic Components
+
+##### Circuit Diagram
+![NU32 IC, Motor Driver, and One Motor](assets/images/circuitDiagramGranularNoSensor.png)
+
 * NU32 PCB
 * 1 or more Breadboards
+* Motor (ROB-12285 on Sparkfun, 298:1 gear ratio)
 * Motor Driver
 * Resistors ( 10k&Omega;)
 * Capacitors ( 10&mu;F)
 * Power Supply (6-12V, I&ge;1.2mA)
-* Bolts
-* Nuts
-* Washers
 
-#### Electronics
-
-##### Circuit Diagram
-![NU32 IC, Motor Driver, and One Motor](assets/images/circuitDiagramGranularNoSensor.png)
+The motors are controlled with 
+DISCUSS THE ELECTRICAL COMPONENTS, CONSTRUCTION, AND VARIED PARAMETERS HERE
 
 ### Experiments and Characterization
 
