@@ -38,11 +38,10 @@ In this article, I will detail the development and testing of a robot capable of
 
 #### Background
 
-<!-- Add a simple image to demostrate the masses colliding with a spring stopping force
-    -->
+![Impacts](assets/images/impactsDescription.png)
 
-At its simplest, the basic idea is that one can initially have two masses, and one is accelerated into the other, colliding inelastically and conserving momenta between the two masses in the collision.  
-There are two important parts of the impact and resultant motion to consider, and let us assume for simplicity that all energy is transferred in one inelastic collision between the impactor and chassis. First is the impact phase during which the impactor is moving toward the chassis and then approximate elastic deformation occurs as the impactor contacts the chassis. This is due to the stopping force the chassis applies to the impactor to stop its motion. The chassis reaches a maximum velocity due to the impact and resultant stopping force, and then the coasting stage takes over. During the coasting stage, the motion of the entire chassis is governed by the initial maximum velocity of the chassis and the pressure applied by the granular material.
+At its simplest, the basic idea is that one can initially have two masses, and one is accelerated into the other, colliding inelastically and conserving momenta between the two masses in the collision. During the impact, all of the energy is converted from kinetic energy into potential energy, treating one of the materials as a spring using the Young's Modulus to represent stiffness of the material. This allows us to use a version of Hooke's Law for springs in the impact between the two masses of known material in order to model elastic deformation and the resulting forces.  
+There are two important parts of the impact and resultant motion to consider, and let us assume for simplicity that all energy is transferred in one inelastic collision between the impactor and chassis. First is the impact phase during which the impactor is moving toward the chassis, and then approximate elastic deformation occurs as the impactor contacts the chassis. This is due to the stopping force the chassis applies to the impactor to stop its motion. The chassis reaches a maximum velocity due to the impact and resultant stopping force before the coasting stage takes over. During the coasting stage, the motion of the entire chassis is governed by the initial maximum velocity of the chassis and the pressure applied by the granular material.
 
 #### Feasibility
 
