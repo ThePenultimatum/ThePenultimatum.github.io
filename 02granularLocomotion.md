@@ -38,12 +38,15 @@ In this article, I will detail the development and testing of a robot capable of
 
 #### Background
 
+<!-- Add a simple image to demostrate the masses colliding with a spring stopping force
+    -->
 
+At its simplest, the basic idea is that one can initially have two masses, and one is accelerated into the other, colliding inelastically and transferring all of its kinetic energy to the other mass.  
+There are two important parts of the impact and resultant motion to consider, and let us assume for simplicity that all energy is transferred in one inelastic collision between the impactor and chassis. First is the impact phase during which the impactor is moving toward the chassis and then approximate elastic deformation occurs as the impactor contacts the chassis. This is due to the stopping force the chassis applies to the impactor to stop its motion. The chassis reaches a maximum velocity due to the impact and resultant stopping force, and then the coasting stage takes over. During the coasting stage, the motion of the entire chassis is governed by the initial maximum velocity of the chassis and the pressure applied by the granular material.
 
 #### Feasibility
 
-There are two important parts of the impact and resultant motion to consider, and let us assume for simplicity that all energy is transferred in one impact (such that there are not successive energetically decreasing elastic impacts in each larger impact). First is the part during which the impactor is still moving toward the chassis and approximate elastic deformation is occurring. The chassis reaches a maximum velocity due to the impact and then the second stage takes over. During the second stage, the motion of the entire chassis is governed by the initial maximum velocity and the pressure applied by the granular material.  
-From the work done by Li et al. in which yield stresses of granular materials were characterized, they found that the yield stress &sigma; linearly increases with depth. Treating the materials in impact as a spring and mass, we can find an acceleration and in turn an impact time.  
+From the work done by Li et al. in which yield stresses of granular materials were characterized, they found that the yield stress &sigma; linearly increases with depth in a granular material [8]. Treating the materials in impact as a spring and mass, we can find an acceleration and in turn an impact time.  
 Using this time along with the accelerations on the inside and outside of the chassis of the system, we can calculate the expected change in position. Performing some test calculations with common and likely materials showed expected changes in position within an order of magnitude of the grain size of common granular materials such as medium-grain sand and poppy seeds. Based on these sample calculations, building out prototypes to test the understanding of the impacts and accelerations the chassis will undergo is beneficial to a design of the whole robot.
 
 ![General Motion Equations](assets/images/generalMotionMathGranular.png)
