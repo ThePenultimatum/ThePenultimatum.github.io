@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Robot for Subsurface Granular Material Locomotion
+title: Subterranean Robot Locomotion
 description: Robot with Novel Locomotion Method Inside Granular Materials
 image: assets/images/sand.jpg
 nav-menu: true
@@ -8,7 +8,7 @@ nav-menu: true
 
 ### Introduction
 
-Granular media are everywhere in the world around us ranging from the sand on beaches to grains in silos and even to the soil we walk on when strolling through a park. Achieving motion in and on granular media allows us to study the behavior of the media itself and how materials interact with the media in various states and to reach desired trajectories within the media (such as the shortest path to a deposit of material or information). Some animals and plants have evolved to locomote through sand and soil, growing roots or displacing material in order to reach water, build caverns, and generally travel. Current popular methods of interacting with granular media to reach goals include body shape frequency undulation, drilling and scoop-based displacement digging, or external actuator-based fluidization followed by quick motions. With the exception of the body undulation technique, these methods have open-mechanical components interacting with the granular media itself. Locomoting through and in a granular media without leaving mechanisms open to the elements remains an interesting and less-explored technique which can have lifespan benefits due to amounts of wear and which can potentially lead to simpler interactions with the granular material itself.  
+Granular media are everywhere in the world around us ranging from the sand on beaches to grains in silos and even to the soil we walk on when strolling through a park. Achieving motion in and on granular media allows us to study the behavior of the media itself and how materials interact with the media in various states and to reach desired trajectories within the media (such as the shortest path to a deposit of material or information). Some animals and plants have evolved to locomote through sand and soil, growing roots or displacing material in order to reach water, build tunnels or dens, and generally travel. Demonstrated methods of interacting with granular media to locomote include body shape undulation [3, 10, 15], auger-based locomotion [4], scoop-based displacement digging [10], or external actuator-based fluidization followed by quick motions [13]. With the exception of the body undulation technique, these methods have open-mechanical components interacting with the granular media. Locomoting through and in a granular media without leaving mechanisms open to the elements remains an interesting and less-explored technique which can have lifespan benefits due to amounts of wear and which can potentially lead to simpler interactions with the granular material.  
 
 
 ### Current and Recent Research 
@@ -17,25 +17,27 @@ A natural divide for looking at locomotion regarding granular materials is to co
 
 #### Surface Motion
 
-In a collaboration between researchers at Carnegie Mellon (Dr. Howie Choset) and Georgia Tech (Dr. Daniel Goldman), a sidewinding snake robot was developed to utilize an animal study in which varying surface contact area in sidewinding snakes enables them to ascend granular slopes.  
-Dan Goldman and Dr. Paul Umbanhowar collaborated to produce a robot with flippers inspired by the biomechanics of young sea turtles crossing sand to reach the ocean after hatching. A flexible wrist is key in achieving efficient motion here.  
-NASA JPL's hopping hedgehog robot utilizes internal flywheels to jump, roll, and tumble on uneven terrain.  
+In a collaboration between researchers at Carnegie Mellon and Georgia Tech, Wright et al. developed a sidewinding snake robot [15] later utilized by Marvi et al. in an animal study in which varying surface contact area in sidewinding snakes enables them to ascend granular slopes [3].  
+Mazouchova et al. produced a robot with flippers inspired by the biomechanics of young sea turtles crossing sand to reach the ocean after hatching. A flexible wrist is key in achieving efficient motion here [11].  
+NASA JPL's hopping hedgehog robot utilizes internal flywheels to jump, roll, and tumble on uneven terrain [1].  
 
 #### Subsurface Motion
-Dr. Chen Li et al Studied terradynamics of legged locomotion in and on various granular media, yielding valuable information regarding stresses on objects during penetration and extraction in granular media.  
-Goldman's lab in collaboration with Umbanhowar also developed an undulating robot inspired by the oscillatory motion of a sandfish lizard. Studying the types of movement, the group found patterns which optimize speed and energy use.  
-Dr. Anette Hosoi and her former student Amos Winter developed a digging robot based on razor clam locomotion that utilizes fluidization of the surrounding granular media during and following specific quick movements.  
-Stephanie Chang, an MS in Robotics alumnus from Northwestern previously worked with Paul Umbanhowar to develop an auger-based robot for locomotion in granular media.  
-Dr. Tilman Spohn and a team of researchers developed and built the HP<sup>3</sup> sensor for the InSight rover to study temperature fluctuations in the Martian regolith. The device is described as a self-hammering nail and uses an internal impact-based locomotion mechanism with a conical tip on a cylindrical body.  
+Li et al. studied terradynamics of legged locomotion in and on various granular media, yielding valuable information regarding stresses on objects during penetration and extraction in granular media [8].  
+Maladen et al. developed an undulating robot inspired by the oscillatory motion of a sandfish lizard. Studying the types of movement, the group found patterns which optimize speed and energy use [9].  
+Winter et al. developed a digging robot based on razor clam locomotion that utilizes fluidization of the surrounding granular media during and following specific quick movements [14].  
+Stephanie Chang and Paul Umbanhowar developed an auger-based robot for locomotion in granular media [4].  
+Most closely related to my work is that of Spohn et al. who developed and built the HP<sup>3</sup> sensor for the InSight rover to study temperature fluctuations in the Martian regolith. The device is described as a self-hammering nail and uses an internal impact-based locomotion mechanism with a conical tip on a cylindrical body [6].  
 
 ### Overview
 
-The goal of this project is to design, build, and test a robot capable of using impulse-based locomotion on and in granular media for three dimensional motion. This impulse-based locomotion is similar in concept to a pile-driver and utilizes research on the yield stress of granular materials. Whereas other recent research into digging and locomotion in granular material has focused more on external methods of moving the media in such a way that it is either fluidized or displaced, this project aims to use no external moving parts and rely purely on the impulsed energy from an internal actuator along with buoyant effects in the media.
+The goal of this project is to design, build, and test a robot capable of using impulse-based locomotion on and in granular media for three dimensional motion. This impulse-based locomotion is similar in concept to a pile-driver and utilizes research on the yield stress of granular materials. Whereas other recent research into digging and locomotion in granular material has focused more on external methods of moving the media in such a way that it is either fluidized or displaced, this project aims to use no external moving parts and rely purely on the impulsed energy from an internal actuator along with buoyant effects in the media.  
+
+In this article, I will detail the development and testing of a robot capable of using this mode of locomotion for one-dimensional movement. The ultimate vision of this project is a multi-directional version of this robot which aims to utilize several of the actuators used in the cylindrical robot simultaneously inside a spherical chassis. This will allow for locomotion in any direction without reorientation.
 
 ### Feasibility
 
 There are two important parts of the impact and resultant motion to consider, and let us assume for simplicity that all energy is transferred in one impact (such that there are not successive energetically decreasing elastic impacts in each larger impact). First is the part during which the impactor is still moving toward the chassis and approximate elastic deformation is occurring. The chassis reaches a maximum velocity due to the impact and then the second stage takes over. During the second stage, the motion of the entire chassis is governed by the initial maximum velocity and the pressure applied by the granular material.
-From the work done by Chen Li et al in which yield stresses of granular materials were characterized, they found that the yield stress &sigma; linearly increases with depth. Treating the materials in impact as a spring and mass, we can find an acceleration and in turn an impact time.  
+From the work done by Li et al. in which yield stresses of granular materials were characterized, they found that the yield stress &sigma; linearly increases with depth. Treating the materials in impact as a spring and mass, we can find an acceleration and in turn an impact time.  
 Using this time along with the accelerations on the inside and outside of the chassis of the system, we can calculate the expected change in position. Performing some test calculations with common and likely materials showed expected changes in position within an order of magnitude of the grain size of common granular materials such as medium-grain sand and poppy seeds. Based on these sample calculations, building out prototypes to test the understanding of the impacts and accelerations the chassis will undergo is beneficial to a design of the whole robot.
 
 ![General Motion Equations](assets/images/generalMotionMathGranular.png)
@@ -46,7 +48,7 @@ The technical documents with relevant derivations and theory are available for v
 
 #### Solenoid-based
 
-Given that the desired effect is one surface repeatedly linearly impacting another surface which is the chassis of the robot in the direction of travel, one clear actuation method to explore is a solenoid-based impact mechanism. Current in a coil then accelerates a plunger along the access of its magnetic field inside the coil until the plunger impacts or reaches its stroke length. This can be repeatedly actuated in such a way. The resultant motion is a function of current since that is the driving factor in the magnetic field that accelerates the plunger before it impacts the surface. The limitations here are the current and voltage limits in the circuit which depend on the specific solenoid actuator and other components in the circuit.
+Given that the desired effect is one surface repeatedly linearly impacting another surface which is the chassis of the robot in the direction of travel, one clear actuation method to explore is a solenoid-based impact mechanism. Current in a coil then accelerates a plunger along the axis of its magnetic field inside the coil until the plunger impacts or reaches its stroke length. This can be repeatedly actuated in such a way. The resultant motion is a function of current since that is the driving factor in the magnetic field that accelerates the plunger before it impacts the surface. The limitations here are the current and voltage limits in the circuit which depend on the specific solenoid actuator and other components in the circuit.
 
 Pros:
 * Linear actuation
@@ -168,7 +170,7 @@ An additional limitation is that of the motor itself. The motor torque is limite
 
 ##### Material Limitations:
 
-As can be seen in the above limitations on depth at which this robot can operate, the materials from which the impactor and chassis are made come into play as the Young's modulus. A higher value in this instance increases the range which the robot can travel in depth. An assumption made here is that the depth limitation is reached before the fracture limit of the chassis itself. 
+As can be seen in the above limitations on depth at which this robot can operate, the materials from which the impactor and chassis are made come into play as the Young's modulus. A higher value in this instance increases the range which the robot can travel in depth. An assumption made here is that the depth limitation is reached before the failure limit of the chassis. 
 
 In addition, as we can see from Chen Li's work with terradynamics in granular materials, the yield stresses' linear variance with depth means that objects embedded and/or moving within the material are subject to pressure differentials. This results in buoyant forces acting on the objects. So, using materials that overall result in a system less dense than the granular material, one should expect this buoyant force to assist in vertical motion. In other words, if the robot is not actuating, and the granular material is fluidized, the robot will eventually float to the surface.  
 
@@ -180,7 +182,7 @@ One potential solution to the spring kickback force is increased friction or pre
 
 Along the same line of thought as the long spring acceleration method, something interesting to explore is a method of slowing the spring-loading down to its minimum speed in order to reduce the magnitude of forces applied to the chassis during this process. This process allows the windup of the spring (which involves an acceleration of internal components of the system, thereby applying forces to the chassis as well) to be applied over a longer period of time. This means that the accelerations and therefore the forces applied to the chassis are smaller.  
   
-The problem discussed above experimentally proved not to be an issue during upward motion, and the results are that the robot is able to locomote straight up through the material with relative ease. This can be explained by the pressure differential between robot ends and lower comparable density of the robot with respect to that of the granular material. Another factor at play could be relatively low friction in extraction compared to insertion in granular material which was seen by Chen Li et al in the explorations of terradynamics in granular media. The result is that a buoyant force assists in the motion and friction is not strong enough to prevent the motion.
+The problem discussed above experimentally proved not to be an issue during upward motion, and the results are that the robot is able to locomote straight up through the material with relative ease. This can be explained by the pressure differential between robot ends and lower comparable density of the robot with respect to that of the granular material. Another factor at play could be relatively low friction in extraction compared to insertion in granular material which was seen by Chen Li et al. in the explorations of terradynamics in granular media. The result is that a buoyant force assists in the motion and friction is not strong enough to prevent the motion.
 
 The buoyant forces appear again in the horizontal motion experiments; when the robot operates at just below the surface, the pressure differential results in an upward motion in addition to motion along the actuation axis. In the experiments, increasing depth in horizontal motion experiments appears to increase the distance traveled over the same amount of time. This points again to stabilization forces such as friction and pressure on the back of the robot coming into play during the spring release.
   
@@ -204,7 +206,6 @@ Another important point to discuss about the experiments is the mass variation o
 * Explore with denser systems to examine behavior when buoyant forces are less of a deciding factor in the motion (heavier metal construction will aid with this, as will battery and control board mounting)  
 * More experiments with different granular materials and packing
 
-The ultimate vision of this project is a multi-directional version of this robot which aims to utilize several of the actuators used in the cylindrical robot simultaneously inside a spherical chassis. This will allow for locomotion in any direction without reorientation.  
 With regards to hardware, a mount for an IMU sensor and the PCB is under development, and an interesting expansion would be exploring control using that sensor data. An on-board battery supply system would allow the robot to be untethered. Battery supply has been tested for the motor itself, but power for the control board is still tethered at the moment. More robust development of the system using machined parts would also allow for more robust studying of the robot behavior in varying granular material conditions. Pursuing more experiments with denser materials will fill gaps in understanding regarding the effects of buoyancy within the granular material.
 
 ## Acknowledgments
@@ -213,16 +214,32 @@ Many thanks to my adviser, Dr. Paul Umbanhowar (Northwestern U.), for his insigh
 
 ## References
 
-* citation for terradynamics paper
-* citation for actuator paper
-* citation for sea turtle paper Paul
-* citation for sandfish lizard robot paper
-* citation for razor clam paper
-* citation for nasa article
-* citation for jpl hopping hedgehog
-* citation for spring mass jumper goldman
-* citation for sidewinder cmu ga tech
-* citation for friction granular material
-* citation for granular impact in the critical state
-* citation for foot design with fluidized granular beds
-* citation for energetics paper
+[1] “'Hedgehog' Robots Hop, Tumble in Microgravity,” NASA, 03-Sep-2015. [Online]. Available: https://www.jpl.nasa.gov/news/news.php?feature=4712. [Accessed: 01-Dec-2019].  
+
+[2] J. Aguilar, A. Lesov, K. Wiesenfeld, and D. I. Goldman, “Lift-Off Dynamics in a Simple Jumping Robot,” Physical Review Letters, vol. 109, no. 17, 2012.  
+
+[3] H. C. Astley, C. Gong, J. Dai, M. Travers, M. M. Serrano, P. A. Vela, H. Choset, J. R. Mendelson, D. L. Hu, and D. I. Goldman, “Modulation of orthogonal body waves enables high maneuverability in sidewinding locomotion,” Proceedings of the National Academy of Sciences, vol. 112, no. 19, pp. 6200–6205, 2015.  
+
+[4] S. L. Chang and P. B. Umbanhowar, Dec-2017. [Online]. Available: https://github.com/stephanniec/burrow_robot/blob/master/burrowing_robot_writeup.pdf. [Accessed: Oct-2019].  
+
+[5] K. M. Dorgan, S. Lefebvre, J. H. Stillman, and M. A. R. Koehl, “Energetics of burrowing by the cirratulid polychaete Cirriformia moorei,” Journal of Experimental Biology, vol. 214, no. 13, pp. 2202–2214, Aug. 2011.  
+
+[6] “Heat Probe,” NASA Mars InSight Mission, 18-Jun-2019. [Online]. Available: https://mars.nasa.gov/insight/spacecraft/instruments/hp3/. [Accessed: 01-Dec-2019].  
+
+[7] M. Ilton, M. S. Bhamla, X. Ma, S. M. Cox, L. L. Fitchett, Y. Kim, J.-S. Koh, D. Krishnamurthy, C.-Y. Kuo, F. Z. Temel, A. J. Crosby, M. Prakash, G. P. Sutton, R. J. Wood, E. Azizi, S. Bergbreiter, and S. N. Patek, “The principles of cascading power limits in small, fast biological and engineered systems,” Science, vol. 360, no. 6387, 2018.  
+
+[8] C. Li, T. Zhang, and D. I. Goldman, “A Terradynamics of Legged Locomotion on Granular Media,” Science, vol. 339, no. 6126, pp. 1408–1412, 2013.  
+
+[9] R. D. Maladen, Y. Ding, P. B. Umbanhowar, and D. I. Goldman, “Undulatory swimming in sand: experimental and simulation studies of a robotic sandfish,” The International Journal of Robotics Research, vol. 30, no. 7, pp. 793–805, 2011.  
+  
+[10] H. Marvi, C. Gong, N. Gravish, H. Astley, M. Travers, R. L. Hatton, J. R. Mendelson, H. Choset, D. L. Hu, and D. I. Goldman, “Sidewinding with minimal slip: Snake and robot ascent of sandy slopes,” Science, vol. 346, no. 6206, pp. 224–229, Sep. 2014.
+
+[11] N. Mazouchova, P. B. Umbanhowar, and D. I. Goldman, “Flipper-driven terrestrial locomotion of a sea turtle-inspired robot,” Bioinspiration & Biomimetics, vol. 8, no. 2, p. 026007, 2013.  
+
+[12] F. Qian, T. Zhang, W. Korff, P. B. Umbanhowar, R. J. Full, and D. I. Goldman, “Principles of appendage design in robots and animals determining terradynamic performance on flowable ground,” Bioinspiration & Biomimetics, vol. 10, no. 5, p. 056014, Aug. 2015.  
+
+[13] P. Umbanhowar and D. I. Goldman, “Granular impact and the critical packing state,” Physical Review E, vol. 82, no. 1, 2010.  
+
+[14] A. G. Winter, A. E. Hosoi, A. H. Slocum, and R. L. H. Deits, “The Design and Testing of RoboClam: A Machine Used to Investigate and Optimize Razor Clam-Inspired Burrowing Mechanisms for Engineering Applications,” Volume 7: 33rd Mechanisms and Robotics Conference, Parts A and B, 2009.  
+
+[15] C. Wright, A. Buchan, B. Brown, J. Geist, M. Schwerin, D. Rollinson, M. Tesch, and H. Choset, “Design and architecture of the unified modular snake robot,” 2012 IEEE International Conference on Robotics and Automation, 2012.
