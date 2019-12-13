@@ -38,7 +38,10 @@ In this article, I will detail the development and testing of a robot capable of
 
 #### Background
 
-![Impacts](assets/images/impactsDescription.png)
+<p align="center">
+  <img src="{{site.url}}/assets/images/impactsDescription.png" alt="my alt text"/>
+  <p align="center">[Fig. 1] Elastic deformation and inelastic impacts are shown at the left and right respectively.</p>
+</p>  
 
 At its simplest, the basic idea is that one can initially have two masses, and one is accelerated into the other, colliding inelastically and conserving momenta between the two masses in the collision. During the impact, all of the energy is converted from kinetic energy into potential energy, treating one of the materials as a spring using the Young's Modulus to represent stiffness of the material. This allows us to use a version of Hooke's Law for springs in the impact between the two masses of known material in order to model elastic deformation and the resulting forces.  
 There are two important parts of the impact and resultant motion to consider, and let us assume for simplicity that all energy is transferred in one inelastic collision between the impactor and chassis. First is the impact phase during which the impactor is moving toward the chassis, and then approximate elastic deformation occurs as the impactor contacts the chassis. This is due to the stopping force the chassis applies to the impactor to stop its motion. The chassis reaches a maximum velocity due to the impact and resultant stopping force before the coasting stage takes over. During the coasting stage, the motion of the entire chassis is governed by the initial maximum velocity of the chassis and the pressure applied by the granular material.
@@ -48,8 +51,11 @@ There are two important parts of the impact and resultant motion to consider, an
 From the work done by Li et al. in which yield stresses of granular materials were characterized, they found that the yield stress &sigma; linearly increases with depth in a granular material [8]. Treating the materials in impact as a spring and mass, we can find an acceleration and in turn an impact time.  
 Using this time along with the accelerations on the inside and outside of the chassis of the system, we can calculate the expected change in position. Performing some test calculations with common and likely materials showed expected changes in position within an order of magnitude of the grain size of common granular materials such as medium-grain sand and poppy seeds. Based on these sample calculations, building out prototypes to test the understanding of the impacts and accelerations the chassis will undergo is beneficial to a design of the whole robot.
 
-![Change in Position Along Axis of Motion Per Impact](assets/images/deltaXImpactDirectionOnlyEquation.png)
-  
+<p align="center">
+  <img src="{{site.url}}/assets/images/deltaXImpactDirectionOnlyEquation.png" alt="my alt text"/>
+  <p align="center">[Eq. 1]Change in Position Along Axis of Motion Per Impact.</p>
+</p>  
+
 Relevent definitions, equations, derivations, and expressions for the variables used above can be found in the supplemental material [here](granularSupplementalMaterial.pdf).
 
 ### Impact Mechanism Explorations
@@ -59,7 +65,8 @@ The ideal system would easily or naturally extend to three-dimensional motion, b
 
 #### Solenoid-based
 
-Given that the desired effect is one surface repeatedly linearly impacting another surface which is the chassis of the robot in the direction of travel, one clear actuation method to explore is a solenoid-based impact mechanism. Current in a coil then accelerates a plunger along the axis of its magnetic field inside the coil until the plunger impacts or reaches its stroke length. This can be repeatedly actuated in such a way. The resultant motion is a function of current since that is the driving factor in the magnetic field that accelerates the plunger before it impacts the surface. The limitations here are the current and voltage limits in the circuit which depend on the specific solenoid actuator and other components in the circuit.
+Given that the desired effect is one surface repeatedly linearly impacting another surface which is the chassis of the robot in the direction of travel, one clear actuation method to explore is a solenoid-based impact mechanism. Current in a coil then accelerates a plunger along the axis of its magnetic field inside the coil until the plunger impacts or reaches its stroke length. This can be repeatedly actuated in such a way. The resultant motion is a function of current since that is the driving factor in the magnetic field that accelerates the plunger before it impacts the surface. Current and voltage limits in the circuit depend on the specific solenoid actuator and other components in the circuit and determine output force of the actuator.  
+To explore this mechanism, I built a small prototype with aluminum tubing and stock, mounting the actuator inside with metal-metal epoxy.
 
 Pros:
 * Linear actuation
@@ -70,13 +77,22 @@ Cons:
 * Limited to preexisting plunger impact surface without special modifications
 * Low mass impactor (momentum of the impactor is a key factor in theoretical distance traveled)
 
-![Front View of Prototype with Solenoid Actuator](assets/images/solenoidPrototypeUpright.png)
-![Top View of Prototype with Solenoid Actuator](assets/images/solenoidPrototypeTop.png)
-![Solenoid Actuator](assets/images/solenoid.png)
+<p align="center">
+  <img src="{{site.url}}/assets/images/solenoidPrototypeUpright.png"/>
+  <p align="center">[Fig. 2] Front View of Prototype with Solenoid Actuator</p>
+</p>
+<p align="center">
+  <img src="{{site.url}}/assets/images/solenoidPrototypeTop.png"/>
+  <p align="center">[Fig. 3] Top View of Prototype with Solenoid Actuator</p>
+</p>
+<p align="center">
+  <img src="{{site.url}}/assets/images/solenoid.png"/>
+  <p align="center">[Fig. 4] Solenoid Actuator</p>
+</p>
 
 #### Gear-Based Planar Trigger Mechanism with Energy Storage
 
-Another method to explore is a gearing system with a custom tooth set to store potential energy in a spring and use the release to impact a surface with either a custom tooth or an attachment to the gear at the end of the motor-gear system. The system here is limited by its shape since gearing up from the motor to a gear-based impactor has impact forces increasing with the radii of the gear at the end of the connected system. Despite its limitations, it shows that the forces desired in the system can be achieved using the combination of a small motor and physical gear-based impactors.
+Another method to explore is a gearing system with a custom tooth set to store potential energy in a spring and use the release to impact a surface with either a custom tooth or an attachment to the gear at the end of the motor-gear system. In building this prototype, I found that this type of system is limited by its shape since gearing up from the motor to a gear-based impactor has impact forces increasing with the radii of the gear at the end of the connected system. Despite its limitations, it shows that the forces desired in the system can be achieved using the combination of a small motor and physical gear-based impactors.
 
 Pros:
 * Rapid prototype iteration
@@ -85,12 +101,18 @@ Pros:
 Cons:
 * More than one-dimensional motion requires intersecting planar mechanisms
 
-![Side View](assets/images/portraitPlanarGears.png)
-![Bottom View for Visibility](assets/images/bottomViewPlanarGears.png)
+<p align="center">
+  <img src="{{site.url}}/assets/images/portraitPlanarGears.png"/>
+  <p align="center">[Fig. 5] Side View of Planar Gear System</p>
+</p>
+<p align="center">
+  <img src="{{site.url}}/assets/images/bottomViewPlanarGears.png"/>
+  <p align="center">[Fig. 6] Bottom View of Planar Gear System</p>
+</p>
 
 #### Cylindrical Rotational-to-Linear Motion Mechanism with Energy Storage
 
-Building on the previous prototypes and ideas, the third prototype uses a motor to transform rotational motion into linear motion to store energy in a spring. Then, the release can be utilized to impact a surface with a component along the spring's axis of compression.
+Building on the previous prototypes and ideas, I designed and built a third prototype which uses a motor to transform rotational motion into linear motion to store energy in a spring. Then, I utilize the release to impact a surface with a component along the spring's axis of compression.
 
 Pros:
 * Motor naturally co-axial with impactor
@@ -99,17 +121,28 @@ Pros:
 Cons:
 * Still need intersecting linear mechanisms for more than one-dimensional motion
 
-![Whole Helical Prototype](assets/images/helicalCylinderWhole.png)
+<p align="center"><script src="https://embed.github.com/view/3d/ThePenultimatum/ThePenultimatum.github.io/master/assets/images/slider.stl"></script><p align="center">[Fig. 7] Sliding Impactor .stl File</p></p>  
+<p align="center"><script src="https://embed.github.com/view/3d/ThePenultimatum/ThePenultimatum.github.io/master/assets/images/helix.stl"></script><p align="center">[Fig. 8] Helix Rotator .stl File</p></p> 
+<p align="center">
+  <img src="{{site.url}}/assets/images/helicalCylinderWhole.png"/>
+  <p align="center">[Fig. 9] Cylindrical Impactor System</p>
+</p>
 
 ### Chosen Design
 
-![Diagonal Up Demonstration](assets/images/diagUpPoppy.gif)
+<p align="center">
+  <img src="{{site.url}}/assets/images/diagUpPoppy.gif" alt="my alt text"/>
+  <p align="center">[Fig. 10] Cylindrical Prototype Base Demonstration</p>
+</p>  
 
 Given the benefits of having a motor co-axial with the impactor and those of having a low volume to output force ratio with the rotational-to-linear cylindrical impactor system, this became the chosen testbed for further exploration. In this prototype, for the purpose of allowing the greatest variance in angles and spring compression, I have chosen to limit the number of helix rises to three. Fewer rises can achieve the same spring compression with lower angles. So lower friction forces resist the motor as it compresses the spring.
 
 #### Mechanical Components
 
-![Deconstructed Prototype](assets/images/deconstructedGranularRobotLabeled.png)
+<p align="center">
+  <img src="{{site.url}}/assets/images/deconstructedGranularRobotLabeled.png" alt="my alt text"/>
+  <p align="center">[Fig. 11] Deconstructed Cylindrical Prototype</p>
+</p> 
 
 * Motor Casing (A)
 * Motor Spacer (B)
@@ -124,13 +157,12 @@ Given the benefits of having a motor co-axial with the impactor and those of hav
 
 DISCUSS THE MECHANICAL COMPONENTS, CONSTRUCTION, AND VARIED PARAMETERS HERE, ADD STL FILES / SCREENSHOTS
 
-<p align="center"><script src="https://embed.github.com/view/3d/ThePenultimatum/ThePenultimatum.github.io/master/assets/images/slider.stl"></script></p>  
-<p align="center"><script src="https://embed.github.com/view/3d/ThePenultimatum/ThePenultimatum.github.io/master/assets/images/helix.stl"></script></p> 
-
 #### Electronic Components
 
-##### Circuit Diagram
-![NU32 IC, Motor Driver, and One Motor](assets/images/circuitDiagramGranularNoSensor.png)
+<p align="center">
+  <img src="{{site.url}}/assets/images/circuitDiagramGranularNoSensor.png" alt="my alt text"/>
+  <p align="center">[Fig. 12] Circuit Diagram: NU32 IC, Motor Driver, and One Motor</p>
+</p> 
 
 * NU32 PCB
 * 1 or more Breadboards
@@ -149,27 +181,34 @@ For the following experiments, a container filled with poppy seeds is used for h
 
 #### Motion Experiments
 
-##### Horizontal Motion, No Additional Mass
+<p align="center">
+  <img src="{{site.url}}/assets/images/horizNoMass.gif" alt="my alt text"/>
+  <p align="center">[Fig. 13] Horizontal, No Additional Mass Demonstration</p>
+</p> 
 
-![Horizontal, No Additional Mass Demonstration](assets/images/horizNoMass.gif)
+<p align="center">
+  <img src="{{site.url}}/assets/images/vertNoMass.gif" alt="my alt text"/>
+  <p align="center">[Fig. 14] Vertical, No Additional Mass Demonstration</p>
+</p> 
 
-##### Vertical Motion (Up), No Additional Mass
+<p align="center">
+  <img src="{{site.url}}/assets/images/horizMass.gif" alt="my alt text"/>
+  <p align="center">[Fig. 15] Horizontal, Additional Mass Demonstration</p>
+</p> 
 
-![Vertical, No Additional Mass Demonstration](assets/images/vertNoMass.gif)
-
-##### Horizontal Motion, Additional Mass
-
-![Horizontal, Additional Mass Demonstration](assets/images/horizMass.gif)
-
-##### Vertical Motion (Up), Additional Mass
-
-![Vertical, Additional Mass Demonstration](assets/images/vertMass.gif)
+<p align="center">
+  <img src="{{site.url}}/assets/images/vertMass.gif" alt="my alt text"/>
+  <p align="center">[Fig. 16] Vertical, Additional Mass Demonstration</p>
+</p> 
 
 ### Discussion
 
 #### Performance
 
-![Performance Data](assets/images/granularDataTable.png)
+<p align="center">
+  <img src="{{site.url}}/assets/images/granularDataTable.png" alt="my alt text"/>
+  <p align="center">[Table 1] Performance Data</p>
+</p> 
 
 In order to compare efficiency between this system and other known systems, we can consider the amount of energy expended by a system in order to travel a certain distance. In order to compare different systems more effectively than bare energy per distance is to include mass in the calculation. Cost of transport can be calculated with units of <sup>J</sup>&frasl;<sub>(kg*m)</sub>. This system experimentally showed that its speed is constant but varies depending on the direction of actuation and the location with respect to the surface of the granular material. For slightly buried horizontal motion, the system averages about 120 <sup>kJ</sup>&frasl;<sub>(kg*m)</sub>. For upward vertical motion, the system averages about 45 <sup>kJ</sup>&frasl;<sub>(kg*m)</sub>. In comparison with data aggregated in a study on the energetics of burrowing, this system is similar to a scorpion as it excavates granular material, yielding a cost of transport of about 50 <sup>J</sup>&frasl;<sub>(kg*m)</sub> with a mass in the tens of grams. These are both about two orders of magnitude higher in cost of transport for a butterworm in sediment (around 100 <sup>J</sup>&frasl;<sub>(kg*m)</sub> with a sub-gram mass. An important difference is that energy consumption for these animals is measured through O<sup>2</sup> consumption, whereas energy use in this robot system depends on the current and voltage used by the motor. Another important difference is the modes via which this energy is expended. Different animals move with different locomotion strategies such as swimming, flying, and running. So accounting for this difference in comparisons is important.
 Looking at the cost of transport with respect to the minimum energy required to move the robot system in the methods tested, we can see that there is a large discrepancy. The minimum energy required is calculated using a spring scale and dragging to estimate force required for constant motion. For upward motion, the robot is about 500 times greater in cost of transport. For horizontal slightly buried motion, the result is about 10000 times greater in cost of transport. This will be discussed further below, but potential discrepancies can point to differences between continuous motion and discrete actuated motion.
@@ -180,7 +219,10 @@ Looking at the cost of transport with respect to the minimum energy required to 
 
 In order to move, the stress created by the impact force must be greater than the yield stress (&sigma;) on the surface of the robot in the direction of travel. For this simple calculation, assume that the other forces acting on the chassis are in equilibrium (such that the robot is of equal density to the granular material). Using the momenta in the system, we can manipulate the equations of motion in order to get an upper bound on depth as a function of the robot geometry, position, and materials.
 
-![Depth Bounds](assets/images/depthLimitationGranular.png)
+<p align="center">
+  <img src="{{site.url}}/assets/images/depthLimitationGranular.png" alt="my alt text"/>
+  <p align="center">[Eq. 2] Depth Bounds</p>
+</p> 
 
 Here, d represents depth below the surface of the granular material, &sigma; is the yield stress per unit depth [8], E is the Young's modulus of the impactor, A is the surface area of the impactor, k is the spring constant of the compression spring, &Delta;x is the length the spring is compressed by the helix-slider system in each impact, L is the length of the impactor in the directional orthogonal to the impact surface, h is the height of the robot body from the outer impact surface to the exit point of the motor wires on the opposite side, and &theta; is the angle the body of the robot makes with the z-axis of the world frame.  
 
