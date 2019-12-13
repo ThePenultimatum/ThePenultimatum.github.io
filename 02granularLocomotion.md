@@ -177,7 +177,9 @@ DISCUSS THE ELECTRICAL COMPONENTS, CONSTRUCTION, AND VARIED PARAMETERS HERE
 
 ### Experiments and Characterization
 
-For the following experiments, a container filled with poppy seeds is used for horizontal and vertical locomotion experiments with and without additional mass added to the impactor. The results are visible below, and the film is sped up to be visible in quick succession.
+For the following experiments, a container filled with poppy seeds is used for horizontal and vertical locomotion experiments with and without additional mass added to the impactor. The results are visible below, and the film is sped up to be visible in quick succession.  
+I performed experiments with both horizontal and vertical motion because they are orthogonal and parallel to parts of the equations governing the motion I expect to see. Both gravity and buoyancy act vertically on the robot, and keeping &theta; as a multiple of 90<sup>o</sup> makes the analysis simpler by reducing the cos(&theta;) term to either 1 or 0 in the supplemental material defining variables for Eq. 1 and Eq. 2. I also performed experiments with downward motion on the poppy seed bed but did not display them here since the robot was not able to achieve downward motion. We expect buoyancy to come into effect due to the density of the robot (about 0.14 <sup>g</sup>&frasl;<sub>cm<sup>3</sup></sub>)
+I vary the mass by about 10% by adding washers to the impactor in order to explore the mass-dependence on both the impact forces with regards to travel and on the density of the robot as a whole. I expect this to affect the effect of buoyance since increasing mass without increasing volume increases the density of the robot and brings it closer to the density of the poppy seeds (1.1 <sup>g</sup>&frasl;<sub>cm<sup>3</sup></sub> [8]).
 
 #### Motion Experiments
 
