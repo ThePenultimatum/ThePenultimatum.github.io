@@ -157,6 +157,7 @@ Given the benefits of having a motor co-axial with the impactor and those of hav
 
 DISCUSS THE MECHANICAL COMPONENTS, CONSTRUCTION, AND VARIED PARAMETERS HERE, ADD STL FILES / SCREENSHOTS
 
+
 #### Electronic Components
 
 <p align="center">
@@ -172,8 +173,7 @@ DISCUSS THE MECHANICAL COMPONENTS, CONSTRUCTION, AND VARIED PARAMETERS HERE, ADD
 * Capacitors ( 10&mu;F)
 * Power Supply (6-12V, I&ge;1.2mA)
 
-The motors are controlled with 
-DISCUSS THE ELECTRICAL COMPONENTS, CONSTRUCTION, AND VARIED PARAMETERS HERE
+The motor is controlled with a 9V, up to 1.5A AC to DC adapter. This power supply is used as a motor power source for a motor driver that takes duty cycle input along with mode select logic input from the NU32 printed circuit board (PCB). The NU32 PCB is powered by a 5V 500mA USB cable from a separate stable power supply. The experiments are run using the maximum duty cycle (100%). However the robot can actuate the impactor system at as little as 50% duty cycle, and this can be a potential benefit to the reaction forces from the impactor accelerations in the system. The motor is a ROB-12285 298:1 gear ratio micro gear motor from Sparkfun and is rated up to 12V and 1.2 Amps.
 
 ### Experiments and Characterization
 
