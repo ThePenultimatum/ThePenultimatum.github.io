@@ -135,8 +135,6 @@ Cons:
   <p align="center">[Fig. 10] Cylindrical Prototype Base Demonstration</p>
 </p>  
 
-Given the benefits of having a motor co-axial with the impactor and those of having a low volume to output force ratio with the rotational-to-linear cylindrical impactor system, this became the chosen testbed for further exploration. In this prototype, for the purpose of allowing the greatest variance in angles and spring compression, I have chosen to limit the number of helix rises to three. Fewer rises can achieve the same spring compression with lower angles. So lower friction forces resist the motor as it compresses the spring.
-
 #### Mechanical Components
 
 <p align="center">
@@ -155,8 +153,20 @@ Given the benefits of having a motor co-axial with the impactor and those of hav
 * Nuts
 * Washers (Not pictured, optional for mass modulation)
 
-DISCUSS THE MECHANICAL COMPONENTS, CONSTRUCTION, AND VARIED PARAMETERS HERE, ADD STL FILES / SCREENSHOTS
+Given the benefits of having a motor co-axial with the impactor and those of having a low volume to output force ratio with the rotational-to-linear cylindrical impactor system, this became the chosen testbed for further exploration.  
 
+For the prototype, I designed a motor casing that tightly secures the chosen motor. Beyond that, the primary components are Components E, F, and G in Fig. 11. E is the slider impactor that strikes the bottom of the chassis component G. There are ridges on the slider which match paths in the bottom chassis with slots which allow the slider to travel along the axis of the chassis without rotational motion. The helix rotator (F) has an extruded neck which has a D-shaft hold for the motor shaft. The slider additionally has pegs which fit into the helical notches on the rotator. Since the chassis prevents the slider from spinning, and the rising helix translates rotational forces on the pegs into translational motion, the slider moves closer to the motor inside the chassis while the helix keeps the same position and only spins in place. This upward motion is utilized to store potential energy in the spring. Once the rotator reaches a certain variable angle, the spring is able to release its potential energy by accelerating the impactor (and in return, also the chassis). The slider is accelerated back down toward the bottom of the chassis (G) and impacts it. A small pedestal at the bottom of the chassis prevents the helix from moving translationally, and the impactor has an inner diameter large enough to fit around the pedestal.  
+
+In this prototype, there are a few variables which can affect the effect of the impact mechanism. Spring compression determines the force, and the amount the spring is compressed is determined by the height of the extruded helix portion. This height is related to the number of notches in the helix as well. The theoretical limit in angles for an infinitely thin notch approaches 90<sup>o</sup> as measured from the horizontal, and this would result in infinitely many rising notches. The theoretical minimum is one one notch that has an angle that depends on both the height of the extrusion and the radius of the cylindrical rotator being extruded. The below relation shows how the angle varies with the other variable properties of the rotator and system.  
+
+<p align="center">
+  <img src="{{site.url}}/assets/images/helixAngle.png" alt="my alt text"/>
+  <p align="center">[Eq. 3] Helix Angle</p>
+</p> 
+
+For the purpose of allowing the greatest variance in angles and spring compression, I have chosen to limit the number of helix rises to three. Fewer rises can achieve the same spring compression with lower angles. So lower friction forces resist the motor as it compresses the spring, and the acceleration happens more slowly which applies lower forces to the chassis in general.
+
+Beyond varying the helix angle and physical measurements of the machined components, I can also vary the mass of the system by adding washers of known mass along the neck of the helix rotator. This increases the mass of the component that is accelerated by the spring, and therefore increases both the density of the robot and the mass of the impactor. I do this in order to explore the momentum rand density relationships with the impact force, translational motion, and buoyancy in the granular media.
 
 #### Electronic Components
 
@@ -274,7 +284,9 @@ Another important point to discuss about the experiments is the mass variation o
 * Construction from metal
 * Control based on sensor data and/or pre-calculated trajectories
 * Variable speed
+* More robust mass variance
 * Explore internal center of mass shifting and more uniform mass distribution for orientation
+* Explore motion with mass along the axis of motion but on the other side of the spring
 * Explore various impact per second speeds and examine behavior as fluidization time grows
 * Explore with denser systems to examine behavior when buoyant forces are less of a deciding factor in the motion (heavier metal construction will aid with this, as will battery and control board mounting)  
 * More experiments with different granular materials and packing
