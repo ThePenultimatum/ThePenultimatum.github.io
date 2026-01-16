@@ -1,9 +1,11 @@
 ---
 layout: post
 title: About Me
-description: 
+description: About Me
 image: assets/images/profileImage.png
+image_alt: Profile Picture
 nav-menu: true
+exclude_from_tiles: false
 ---
 
 ## Mark Dyehouse 101

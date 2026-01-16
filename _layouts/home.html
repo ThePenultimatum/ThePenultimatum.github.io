@@ -4,9 +4,11 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 
-{% include head.html %}
+<head>
+  {% include head.html %}
+</head>
 
 <body>
 
@@ -21,7 +23,7 @@
     </section>
 
     <!-- Main -->
-    <div id="main">
+    <main id="main">
 
         <!-- One -->
         {% include tiles.html %}
@@ -34,7 +36,7 @@
                 </header>
                 <p>{{ content }}</p>
                 <ul class="actions">
-                    <li><a href="aboutMe.html" class="button next">More Info</a></li>
+                    <li><a href="{{ '/00aboutMe.html' | relative_url }}" class="button next">More Info</a></li>
                 </ul>
             </div>
         </section>

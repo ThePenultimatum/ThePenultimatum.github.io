@@ -3,7 +3,9 @@ layout: post
 title: Robot Perception
 description: Nao RoboCup Soccer Perception
 image: assets/images/naoFromRoboCupWikipedia.png
+image_alt: Nao Robot Image
 nav-menu: true
+exclude_from_tiles: false
 ---
 
 ## Overview

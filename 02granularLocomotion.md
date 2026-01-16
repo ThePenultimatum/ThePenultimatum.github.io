@@ -3,7 +3,9 @@ layout: post
 title: Subterranean Robot Locomotion
 description: Robot with Novel Locomotion Method Inside Granular Materials
 image: assets/images/sand.jpg
+image_alt: Granular Material Image
 nav-menu: true
+exclude_from_tiles: false
 ---
 
 ### Introduction

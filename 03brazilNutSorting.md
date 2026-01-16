@@ -3,7 +3,9 @@ layout: post
 title: Swarm Sorting
 description: Brazil Nut Effect Sorting Simulation with Kilobots
 image: assets/images/brazilNutSim.png
+image_alt: Swarm Sorting Simulation Image
 nav-menu: true
+exclude_from_tiles: false
 ---
 
 ## Overview

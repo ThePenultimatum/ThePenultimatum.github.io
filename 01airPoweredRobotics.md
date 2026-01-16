@@ -3,7 +3,9 @@ layout: post
 title: Air-Powered Soft Robotics
 description: Soft Deformable Snake Robot and Simultaneous Pneumatic Actuation Manifold System
 image: assets/images/manifoldWithFinger.png
+image_alt: Pneumatic Manifold Project Image
 nav-menu: true
+exclude_from_tiles: false
 ---
 
 ## Overview

@@ -22,8 +22,9 @@ tiles-count: 20
 github_url: https://github.com/ThePenultimatum/
 linkedin_url: https://www.linkedin.com/in/mark-dyehouse-71a66880/
 
-# build settings
-markdown: kramdown
-
 sass:
   style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

@@ -4,6 +4,7 @@ title: Mars Habitat
 description: Design and Prototyping of Closed-Loop Habitat for Plants on Mars
 image: assets/images/mars-structure-rendering.jpg
 nav-menu: true
+exclude_from_tiles: false
 ---
 
 ## Overview

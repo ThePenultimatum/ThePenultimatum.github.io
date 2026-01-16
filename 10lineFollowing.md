@@ -2,8 +2,8 @@
 layout: post
 title: Line-Following Car
 description: Laser Cut Car for Line Following with Microcontroller and Camera
-image: 
 nav-menu: true
+exclude_from_tiles: false
 ---
 
 ## Overview

@@ -3,7 +3,9 @@ layout: post
 title: Swarm Coordinate System
 description: Local Coordinate System Creation with Kilobots
 image: assets/images/coordCreation.png
+image_alt: Swarm Coordinate System Creation Results
 nav-menu: true
+exclude_from_tiles: false
 ---
 
 ## Overview
