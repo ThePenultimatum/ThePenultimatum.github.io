@@ -3,7 +3,9 @@ layout: post
 title: Drawing With Sawyer
 description: Custom Portraits Drawn with a Sawyer Robotic Arm
 image: assets/images/drawingWithSawyer.png
+image_alt: Sawyer Drawing Action Image
 nav-menu: true
+exclude_from_tiles: false
 ---
 
 ## Overview

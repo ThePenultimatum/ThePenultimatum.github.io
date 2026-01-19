@@ -3,7 +3,9 @@ layout: post
 title: DIY Localization Sensor Network
 description: DIY Microcontroller Ultrasonic Sensor Network for Trilateration and Localization
 image: assets/images/angleFans1.JPG
+image_alt: Sensor Network Drawing
 nav-menu: true
+exclude_from_tiles: false
 ---
 
 ## Overview

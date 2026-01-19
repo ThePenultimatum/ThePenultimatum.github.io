@@ -1,28 +1,41 @@
 <section id="one" class="tiles">
-  {% for post in site.posts limit:20 %}
-  {% if site.tiles-source == 'posts' and page.title != null and page.title != "Elements" and page.title != "Generic" and page.title != "Landing" %}
-  <article>
-    <span class="image">
-      <img src="{{ post.image }}" alt="" />
-    </span>
-    <header class="major">
-      <h3><a href="{{ post.url  | relative_url }}" class="link">{{ post.title }}</a></h3>
-      <p>{{ post.description }}</p>
-    </header>
-  </article>
+
+  <!-- Tiles from posts -->
+  {% if site.tiles-source == 'posts' %}
+    {% for post in site.posts limit:20 %}
+      {% if post.title != null and post.exclude_from_tiles != true and post.show_tile != false %}
+        <article>
+          <span class="image">
+            {% if post.image %}
+              <img src="{{ post.image }}" alt="{{ post.image_alt | default: post.title }}" />
+            {% endif %}
+          </span>
+          <header class="major">
+            <h3><a href="{{ post.url | relative_url }}" class="link">{{ post.title }}</a></h3>
+            <p>{{ post.description }}</p>
+          </header>
+        </article>
+      {% endif %}
+    {% endfor %}
   {% endif %}
-  {% endfor %}
-  {% for page in site.pages limit:20 %}
-  {% if site.tiles-source == 'pages' and page.show_tile != false and page.title != null and page.title != "Elements" and page.title != "Generic" and page.title != "Landing" and page.title != "All posts"%}
-  <article>
-    <span class="image">
-      <img src="{{ page.image }}" alt="" />
-    </span>
-    <header class="major">
-      <h3><a href="{{ page.url | relative_url  }}" class="link">{{ page.title }}</a></h3>
-      <p>{{ page.description }}</p>
-    </header>
-  </article>
+
+  <!-- Tiles from pages -->
+  {% if site.tiles-source == 'pages' %}
+    {% for page in site.pages limit:20 %}
+      {% if page.show_tile != false and page.exclude_from_tiles != true and page.title != null %}
+        <article>
+          <span class="image">
+            {% if page.image %}
+              <img src="{{ page.image }}" alt="{{ page.image_alt | default: page.title }}" />
+            {% endif %}
+          </span>
+          <header class="major">
+            <h3><a href="{{ page.url | relative_url }}" class="link">{{ page.title }}</a></h3>
+            <p>{{ page.description }}</p>
+          </header>
+        </article>
+      {% endif %}
+    {% endfor %}
   {% endif %}
-  {% endfor %}
+
 </section>

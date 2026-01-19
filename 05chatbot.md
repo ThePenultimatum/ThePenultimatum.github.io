@@ -3,7 +3,9 @@ layout: post
 title: Chatbot
 description: Chatbot trained in English and Mandarin with Transformer Model from Google Brain
 image: assets/images/chatbot.jpeg
+image_alt: Chatbot Sprite
 nav-menu: true
+exclude_from_tiles: false
 ---
 
 ## Introduction
