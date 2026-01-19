@@ -25,8 +25,10 @@ Inspired by his previous work and considering this new telemetry data pipeline, 
 * Machine learning with regards to robot decision-making
 
 ## Work Experience
-* Robotics Path Planning Software Engineer at Sikorsky, a Lockheed Martin Company
-    - I am working on path planning algorithms, simulations, testing, and other improvements on autonomy controls software for helicopters.
+* Senior Robotics Software Engineer at Sikorsky, a Lockheed Martin Company
+    - R&D, implementation, research, testing, design for software and systems in AI/autonomy for aerial vehicles.
+    - Specific experience in motion planning stack, integration and system testing, flight test software support, perception benchmarking and exploratory testing, mechatronics and embedded systems work related to gimbals and sensors, CI/CD and tooling for various parts of the stack, robust mission planning, and world map and terrain model related sensor fusion and data processing.
+    - Worked with Sikorsky MATRIX, SARA, S-70 Black Hawk, and Nomad family of aircraft. R&D robotics software, autonomy, navigation and path planning, tools, testing, simulations for aerial vehicle autonomy with Sikorsky
     - Stratford, CT
 * Software Engineer (Big Data) at Omnicell
     - I built and maintained telemetry data streaming, processing, and analytics pipeline using Scala, Spark, and Kafka with AWS, Databricks (did some feature design work as well). My team won the company hackathon’s “Most Cross-Functional” Award with a fuzzy text matching system for comparing customer and manufacturer descriptions of medical items using a customized variant of Levenshtein distance allowing for abbreviations leveraging AWS.
